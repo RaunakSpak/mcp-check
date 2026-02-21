@@ -54,15 +54,27 @@ Add the following configuration to your MCP settings (usually in `~/.cursor/mcp.
 
 **Note:** Update the `cwd` path to match your actual project directory.
 
-### Manual Testing
+### Running the Server
 
-You can test the server manually using stdio:
+#### Option 1: Double-click the batch file (Windows)
+Simply double-click `run_mcp_server.bat` to start the server.
 
+#### Option 2: Run from PowerShell
+```powershell
+.\run_mcp_server.ps1
+```
+
+#### Option 3: Run from Command Prompt
+```cmd
+run_mcp_server.bat
+```
+
+#### Option 4: Run directly with Python
 ```bash
 python mcp_server.py
 ```
 
-The server communicates via stdio using the MCP protocol.
+The server communicates via stdio using the MCP protocol and will display startup information when launched.
 
 ## Tool Examples
 

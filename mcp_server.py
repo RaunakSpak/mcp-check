@@ -300,4 +300,32 @@ def get_sitemap() -> str:
 
 
 if __name__ == "__main__":
-    mcp.run()
+    import sys
+    
+    print("=" * 60)
+    print("Enecovery Website MCP Server")
+    print("=" * 60)
+    print(f"Base directory: {BASE_DIR}")
+    print(f"HTML files found: {len(list_html_files())}")
+    print("=" * 60)
+    print("Server starting...")
+    print("Available tools:")
+    print("  - read_page")
+    print("  - extract_text")
+    print("  - get_metadata")
+    print("  - list_pages")
+    print("  - search_content")
+    print("  - get_sitemap")
+    print("=" * 60)
+    print("Waiting for MCP client connections...")
+    print("Press Ctrl+C to stop the server")
+    print("=" * 60)
+    
+    try:
+        mcp.run()
+    except KeyboardInterrupt:
+        print("\n\nServer stopped by user.")
+        sys.exit(0)
+    except Exception as e:
+        print(f"\n\nError running server: {e}", file=sys.stderr)
+        sys.exit(1)
