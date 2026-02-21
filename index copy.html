@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/enecovery-fav.png">
+
+    <!-- Primary Meta Tags -->
+    <title>Enecovery – Sustainable Waste-to-Energy, Circular Economy & Environmental Solutions</title>
+    <meta name="description"
+        content="Enecovery delivers innovative waste-to-energy, hydrogen enriched catalytic gasification, sludge management, and circular economy solutions for industries and smart cities. Create a cleaner, greener future with transformative environmental engineering.">
+    <meta name="keywords"
+        content="Enecovery, waste to energy, circular economy solutions, hydrogen gasification, sludge management, environmental engineering, sustainable technologies">
+    <meta name="author" content="Enecovery">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#22a060">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Enecovery – Sustainable Waste-to-Energy & Environmental Solutions">
+    <meta property="og:description"
+        content="Innovative waste-to-energy, circular economy, hydrogen technology, and environmental engineering solutions for a cleaner future.">
+    <meta property="og:image" content="https://enecovery.com/images/banner.jpg">
+    <meta property="og:image:alt" content="Enecovery Waste-to-Energy Solution">
+    <meta property="og:url" content="https://enecovery.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Enecovery">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enecovery – Waste-to-Energy & Environmental Engineering">
+    <meta name="twitter:description"
+        content="Advanced waste transformation, hydrogen enriched gasification, and circular economy innovation.">
+    <meta name="twitter:image" content="https://enecovery.com/images/banner.jpg">
+    <meta name="twitter:site" content="@enecovery">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://enecovery.com/">
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts (moved from CSS @import for faster loading) -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+    <!-- Preload hero banner image for fast LCP -->
+    <link rel="preload" as="image" href="assets/images/home/4.jpg" fetchpriority="high">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome-6.css">
+    <link rel="stylesheet" href="assets/css/plugins/unicons.css">
+    <link rel="stylesheet" href="assets/css/plugins/metismenu.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./changes.css">
+
+    <style>
+        /* ============================================
+   CSS Custom Properties (Variables)
+   ============================================ */
+        :root {
+            --header-height: 80px;
+            --header-height-sticky: 70px;
+            --header-bg: #ffffff;
+            --header-bg-sticky: rgba(255, 255, 255, 0.98);
+            --primary-color: #2d5a3d;
+            /* Adjust to your brand green */
+            --text-color: #333333;
+            --text-hover: #2d5a3d;
+            --dropdown-bg: #ffffff;
+            --dropdown-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            --transition-fast: 0.2s ease;
+            --transition-medium: 0.3s ease;
+            --container-max-width: 1400px;
+            --container-padding: 1.5rem;
+            --z-header: 1000;
+            --z-dropdown: 1010;
+            --z-mobile-menu: 1020;
+        }
+
+        /* ============================================
+   Reset & Base Styles
+   ============================================ */
+        .header-main *,
+        .header-main *::before,
+        .header-main *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-main {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: var(--header-bg);
+            z-index: var(--z-header);
+            transition: all var(--transition-medium);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Sticky State */
+        .header-main.is-sticky {
+            height: var(--header-height-sticky);
+            background: var(--header-bg-sticky);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ============================================
+   Container
+   ============================================ */
+        .header-main > .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            height: 100%;
+        }
+
+        /* ============================================
+   Navbar Layout
+   ============================================ */
+        .header-main .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            gap: 2rem;
+            padding: 0;
+            flex-wrap: nowrap;
+        }
+
+        /* ============================================
+   Logo
+   ============================================ */
+        .navbar__logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            transition: transform var(--transition-fast);
+        }
+
+        .navbar__logo:hover {
+            transform: scale(1.02);
+        }
+
+        .navbar__logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+            transition: height var(--transition-medium);
+        }
+
+        .header-main.is-sticky .navbar__logo img {
+            height: 45px;
+        }
+
+        /* ============================================
+   Desktop Navigation
+   ============================================ */
+        .navbar__nav {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 0.5rem;
+            margin-left: auto;
+        }
+
+        .header-main .nav-item {
+            position: relative;
+        }
+
+        .header-main .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+
+        .header-main .nav-link:hover,
+        .header-main .nav-link:focus {
+            color: var(--text-hover);
+            background: rgba(45, 90, 61, 0.05);
+            outline: none;
+        }
+
+        .header-main .nav-link:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* CTA Button */
+        .header-main .nav-link--cta {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 25px;
+            margin-left: 0.5rem;
+        }
+
+        .header-main .nav-link--cta:hover {
+            background: #1e3d2a;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(45, 90, 61, 0.3);
+        }
+
+        /* Chevron Icon */
+        .header-main .icon-chevron {
+            transition: transform var(--transition-fast);
+            opacity: 0.6;
+        }
+
+        .header-main .nav-item.has-dropdown:hover .icon-chevron,
+        .header-main .nav-item.has-dropdown:focus-within .icon-chevron {
+            transform: rotate(180deg);
+            opacity: 1;
+        }
+
+        /* ============================================
+   Dropdown Menus
+   ============================================ */
+        .header-main .dropdown-menu {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--dropdown-bg);
+            min-width: 220px;
+            padding: 0.5rem;
+            border-radius: 12px;
+            box-shadow: var(--dropdown-shadow);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all var(--transition-medium);
+            list-style: none;
+            z-index: var(--z-dropdown);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            float: none;
+            margin: 0;
+            color: inherit;
+        }
+
+        /* Show dropdown on hover/focus */
+        .header-main .nav-item.has-dropdown:hover>.dropdown-menu,
+        .header-main .nav-item.has-dropdown:focus-within>.dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .header-main .dropdown-menu li {
+            position: relative;
+        }
+
+        .header-main .dropdown-menu a,
+        .header-main .submenu-toggle {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            transition: all var(--transition-fast);
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .header-main .dropdown-menu a:hover,
+        .header-main .dropdown-menu a:focus,
+        .header-main .submenu-toggle:hover,
+        .header-main .submenu-toggle:focus {
+            background: rgba(45, 90, 61, 0.08);
+            color: var(--primary-color);
+            padding-left: 1.25rem;
+        }
+
+        /* External Link Icon */
+        .header-main .icon-external {
+            display: inline-block;
+            margin-left: 0.25rem;
+            vertical-align: middle;
+        }
+
+        /* ============================================
+   Mega Menu (Sector Dropdown)
+   ============================================ */
+        .header-main .dropdown-menu--mega {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            min-width: 800px;
+            padding: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        .header-main .nav-item.has-dropdown:hover .dropdown-menu--mega {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .header-main .mega-column {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .header-main .mega-column strong {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary-color);
+            border-bottom: 2px solid rgba(45, 90, 61, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .header-main .mega-column ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .header-main .mega-column a {
+            padding: 0.5rem;
+            font-size: 0.85rem;
+            border-radius: 6px;
+        }
+
+        /* ============================================
+   Submenus (Nested Dropdowns)
+   ============================================ */
+        .header-main .has-submenu {
+            position: relative;
+        }
+
+        .header-main .submenu {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: var(--dropdown-bg);
+            min-width: 200px;
+            padding: 0.5rem;
+            border-radius: 12px;
+            box-shadow: var(--dropdown-shadow);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all var(--transition-medium);
+            list-style: none;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin-left: 0.5rem;
+            float: none;
+        }
+
+        /* Position submenus to left if near right edge */
+        .header-main .has-submenu:nth-last-child(-n+2) .submenu {
+            left: auto;
+            right: 100%;
+            margin-left: 0;
+            margin-right: 0.5rem;
+            transform: translateX(10px);
+        }
+
+        .header-main .has-submenu:hover>.submenu,
+        .header-main .has-submenu:focus-within>.submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .header-main .submenu-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .header-main .submenu-toggle .icon-chevron {
+            transform: rotate(-90deg);
+        }
+
+        /* ============================================
+   Mobile Toggle Button
+   ============================================ */
+        .header-main .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            gap: 5px;
+            border-radius: 8px;
+            transition: background var(--transition-fast);
+        }
+
+        .header-main .mobile-toggle:hover {
+            background: rgba(45, 90, 61, 0.1);
+        }
+
+        .header-main .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-color);
+            border-radius: 2px;
+            transition: all var(--transition-medium);
+            transform-origin: center;
+        }
+
+        /* Hamburger Animation when Active */
+        .header-main .mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .header-main .mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .header-main .mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* ============================================
+   Mobile Menu Overlay
+   ============================================ */
+        .header-main .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--header-bg);
+            z-index: var(--z-mobile-menu);
+            transition: right var(--transition-medium);
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-main .mobile-menu.is-active {
+            right: 0;
+        }
+
+        .header-main .mobile-menu__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .header-main .mobile-menu__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .header-main .mobile-menu__close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text-color);
+            border-radius: 50%;
+            transition: background var(--transition-fast);
+        }
+
+        .header-main .mobile-menu__close:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Mobile Menu Content */
+        .header-main .mobile-menu__content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .header-main .mobile-nav-list {
+            list-style: none;
+        }
+
+        .header-main .mobile-nav-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .header-main .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .header-main .mobile-dropdown {
+            display: none;
+            padding-left: 1rem;
+            list-style: none;
+        }
+
+        .header-main .mobile-dropdown.is-open {
+            display: block;
+        }
+
+        .header-main .mobile-dropdown a {
+            display: block;
+            padding: 0.75rem 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Backdrop */
+        .mobile-menu-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-medium);
+            z-index: calc(var(--z-mobile-menu) - 1);
+        }
+
+        .mobile-menu-backdrop.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ============================================
+   Responsive Breakpoints
+   ============================================ */
+
+        /* Large Tablets & Small Desktops */
+        @media (max-width: 1200px) {
+            .header-main .dropdown-menu--mega {
+                grid-template-columns: repeat(3, 1fr);
+                min-width: 700px;
+            }
+        }
+
+        /* Tablets */
+        @media (max-width: 992px) {
+            :root {
+                --header-height: 70px;
+                --header-height-sticky: 60px;
+            }
+
+            .header-main .navbar__nav {
+                display: none;
+            }
+
+            .header-main .mobile-toggle {
+                display: flex;
+            }
+
+            .header-main .navbar__logo img {
+                height: 45px;
+            }
+
+            .header-main.is-sticky .navbar__logo img {
+                height: 40px;
+            }
+        }
+
+        /* Mobile Landscape */
+        @media (max-width: 768px) {
+            :root {
+                --container-padding: 1rem;
+            }
+
+            .header-main .dropdown-menu--mega {
+                grid-template-columns: repeat(2, 1fr);
+                min-width: 500px;
+            }
+        }
+
+        /* Mobile Portrait */
+        @media (max-width: 576px) {
+            .header-main .mobile-menu {
+                width: 100%;
+                max-width: none;
+            }
+
+            .header-main .navbar__logo img {
+                height: 40px;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+
+            .header-main .nav-link:focus,
+            .header-main .dropdown-menu a:focus {
+                outline: 3px solid currentColor;
+                outline-offset: 2px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .header-main {
+                position: static;
+                box-shadow: none;
+            }
+
+            .header-main .mobile-toggle,
+            .header-main .dropdown-menu {
+                display: none !important;
+            }
+        }
+
+        /* =============================================
+           Override Bootstrap & changes.css conflicts
+           ============================================= */
+
+        /* Force dropdown-menu to use opacity/visibility approach, NOT display:none */
+        .header-main .dropdown-menu {
+            display: block !important;
+            position: absolute !important;
+            opacity: 0;
+            visibility: hidden;
+            background: var(--dropdown-bg) !important;
+            border-radius: 12px !important;
+            box-shadow: var(--dropdown-shadow) !important;
+            border: 1px solid rgba(0, 0, 0, 0.05) !important;
+            padding: 0.5rem !important;
+            float: none !important;
+            margin: 0 !important;
+            color: inherit !important;
+            inset: unset !important;
+        }
+
+        .header-main .nav-item.has-dropdown:hover > .dropdown-menu,
+        .header-main .nav-item.has-dropdown:focus-within > .dropdown-menu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        .header-main .has-submenu:hover > .submenu,
+        .header-main .has-submenu:focus-within > .submenu {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateX(0) !important;
+        }
+
+        .header-main .submenu {
+            display: block !important;
+            position: absolute !important;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Override changes.css .dropdown-menu mobile rules */
+        @media (max-width: 1025px) {
+            .header-main .dropdown-menu {
+                display: block !important;
+                position: absolute !important;
+            }
+            .header-main .submenu {
+                display: block !important;
+                position: absolute !important;
+            }
+        }
+
+        /* Override changes.css .mobile-toggle span rules */
+        .header-main .hamburger-line {
+            display: block !important;
+            width: 24px !important;
+            height: 2px !important;
+            background: var(--text-color) !important;
+            border-radius: 2px !important;
+        }
+
+        /* Override changes.css nav link styles */
+        .header-main .dropdown-menu a {
+            color: var(--text-color) !important;
+            background: none !important;
+        }
+        .header-main .dropdown-menu a:hover,
+        .header-main .dropdown-menu a:focus {
+            color: var(--primary-color) !important;
+            background: rgba(45, 90, 61, 0.08) !important;
+        }
+
+        /* Ensure mobile toggle shows/hides correctly */
+        @media (max-width: 992px) {
+            .header-main .navbar__nav {
+                display: none !important;
+            }
+            .header-main .mobile-toggle {
+                display: flex !important;
+            }
+        }
+        @media (min-width: 993px) {
+            .header-main .mobile-toggle {
+                display: none !important;
+            }
+            .header-main .navbar__nav {
+                display: flex !important;
+            }
+        }
+    </style>
+
+    <!-- Swiper slide inline styles -->
+    <style>
+        .swiper-slide {
+            transition: opacity 2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            height: 100%;
+            background-color: #eee;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            bottom: 20px;
+            z-index: 10;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .swiper-button-prev {
+            right: 70px;
+        }
+
+        .swiper-button-next {
+            right: 30px;
+        }
+    </style>
+
+    <!-- Scripts moved to bottom of body for performance -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V755PK392P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-V755PK392P');
+    </script>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Enecovery",
+        "url": "https://enecovery.com",
+        "description": "Sustainable waste-to-energy and circular economy solutions",
+        "logo": "https://enecovery.com/assets/images/logo/Enecovery-Green-Logo-Final.svg",
+        "sameAs": ["https://www.linkedin.com/company/enecovery"],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-22-XXXX-XXXX",
+            "contactType": "Customer Support",
+            "email": "info@enecovery.com"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "505 5th floor Express Chamber, 72 Andheri kurla road",
+            "addressLocality": "Mumbai",
+            "postalCode": "400069",
+            "addressCountry": "IN"
+        }
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+
+
+    <!-- header man start -->
+    <header class="header-main" id="header">
+        <div class="container">
+            <nav class="navbar" aria-label="Main Navigation">
+                <!-- Logo -->
+                <a href="index.html" class="navbar__logo" aria-label="Enecovery Home">
+                    <img src="assets/images/logo/Enecovery-Green-Logo-Final.svg" alt="Enecovery Logo" width="180"
+                        height="40" loading="eager" />
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="navbar__nav" role="menubar">
+                    <!-- About Us -->
+                    <li class="nav-item has-dropdown" role="none">
+                        <button class="nav-link" aria-expanded="false" aria-haspopup="true" role="menuitem">
+                            About Us
+                            <svg class="icon-chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M6 8L1 3h10z" fill="currentColor" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="aboutus.html" role="menuitem">Who We Are</a></li>
+                            <li><a href="our-journey.html" role="menuitem">Enecovery Journey</a></li>
+                            <li class="has-submenu">
+                                <button class="submenu-toggle" aria-expanded="false" role="menuitem">
+                                    Our Team
+                                    <svg class="icon-chevron" width="10" height="10" viewBox="0 0 12 12"
+                                        aria-hidden="true">
+                                        <path d="M6 8L1 3h10z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <ul class="submenu" role="menu">
+                                    <li><a href="core-team.html" role="menuitem">Core Team</a></li>
+                                    <li><a href="#" role="menuitem">Technician</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Sector -->
+                    <li class="nav-item has-dropdown" role="none">
+                        <button class="nav-link" aria-expanded="false" aria-haspopup="true" role="menuitem">
+                            Sector
+                            <svg class="icon-chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M6 8L1 3h10z" fill="currentColor" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu--mega" role="menu">
+                            <li class="mega-column">
+                                <strong>Green Energy</strong>
+                                <ul>
+                                    <li><a href="waste-to-energy.html">Waste to Energy</a></li>
+                                    <li><a href="sludge-management.html">Sludge Management</a></li>
+                                    <li><a href="water-purification.html">Water Purification</a></li>
+                                    <li><a href="green-carbon.html">Green Carbon</a></li>
+                                    <li><a href="nano-charcoal.html">Nano Charcoal</a></li>
+                                </ul>
+                            </li>
+                            <li class="mega-column">
+                                <strong>Technologies</strong>
+                                <ul>
+                                    <li><a href="carbon-trading.html">Carbon Trading</a></li>
+                                    <li><a href="#">Catalyst – TCC</a></li>
+                                    <li><a href="#">Catalyst – HCC</a></li>
+                                </ul>
+                            </li>
+                            <li class="mega-column">
+                                <strong>Coal Gasification</strong>
+                                <ul>
+                                    <li><a href="cbm.html">Coal Based Methane (CBM)</a></li>
+                                </ul>
+                            </li>
+                            <li class="mega-column">
+                                <strong>Nuclear Reactor</strong>
+                                <ul>
+                                    <li><a href="smfr.html">Small Modular Fusion Reactor</a></li>
+                                    <li><a href="smmtsbfr.html">Molten Thorium Salt Reactor</a></li>
+                                </ul>
+                            </li>
+                            <li class="mega-column">
+                                <strong>Minerals & Mines</strong>
+                                <ul>
+                                    <li><a href="coal.html">Coal</a></li>
+                                    <li><a href="copper.html">Copper</a></li>
+                                    <li><a href="oil-shale.html">Oil Shale</a></li>
+                                    <li><a href="tight-oil.html">Tight Oil</a></li>
+                                </ul>
+                            </li>
+                            <li class="mega-column">
+                                <strong>Green Transportation</strong>
+                                <ul>
+                                    <li><a href="electric-vehicles.html">Electric Vehicles</a></li>
+                                    <li><a href="hydrogen-fuel-cell-vehicles.html">Hydrogen Fuel Cells</a></li>
+                                    <li><a href="hydrogen-cryogenic-engines.html">Cryogenic Engines</a></li>
+                                    <li><a href="methanol-fuel-cells.html">Methanol Fuel Cell</a></li>
+                                </ul>
+                            </li>
+                            <li class="mega-column">
+                                <strong>Artificial Intelligence</strong>
+                                <ul>
+                                    <li><a href="robotics.html">Robotics</a></li>
+                                    <li><a href="data-centres.html">Data Centres</a></li>
+                                    <li><a href="ai-education.html">AI Education</a></li>
+                                    <li><a href="technical-training.html">Technical Training</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Technologies -->
+                    <li class="nav-item has-dropdown" role="none">
+                        <button class="nav-link" aria-expanded="false" aria-haspopup="true" role="menuitem">
+                            Technologies
+                            <svg class="icon-chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M6 8L1 3h10z" fill="currentColor" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="tcc.html">Thermo-Catalytic Conversion (TCC)</a></li>
+                            <li>
+                                <a href="pdfs/CoalGasification-Technology2.pdf" target="_blank" rel="noopener">
+                                    Hydrogen Enriched Catalytic Coal Gasification (HCC)
+                                    <svg class="icon-external" width="12" height="12" viewBox="0 0 24 24"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"
+                                            stroke="currentColor" stroke-width="2" fill="none" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Certifications -->
+                    <li class="nav-item has-dropdown" role="none">
+                        <button class="nav-link" aria-expanded="false" aria-haspopup="true" role="menuitem">
+                            Certification & Awards
+                            <svg class="icon-chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M6 8L1 3h10z" fill="currentColor" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="assets/images/home/awards.jpg" target="_blank">Awards</a></li>
+                            <li class="has-submenu">
+                                <button class="submenu-toggle" aria-expanded="false" role="menuitem">
+                                    Patents
+                                    <svg class="icon-chevron" width="10" height="10" viewBox="0 0 12 12"
+                                        aria-hidden="true">
+                                        <path d="M6 8L1 3h10z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <ul class="submenu" role="menu">
+                                    <li>
+                                        <a href="https://patents.justia.com/inventor/raghavendra-rao-turlapati"
+                                            target="_blank" rel="noopener">
+                                            USA Patent Certificate
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://patents.justia.com/inventor/raghavendra-rao-turlapati"
+                                            target="_blank" rel="noopener">
+                                            South Africa Patent Certificate
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Projects -->
+                    <li class="nav-item has-dropdown" role="none">
+                        <button class="nav-link" aria-expanded="false" aria-haspopup="true" role="menuitem">
+                            Projects
+                            <svg class="icon-chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M6 8L1 3h10z" fill="currentColor" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="has-submenu">
+                                <button class="submenu-toggle" aria-expanded="false" role="menuitem">
+                                    Commissioned
+                                    <svg class="icon-chevron" width="10" height="10" viewBox="0 0 12 12"
+                                        aria-hidden="true">
+                                        <path d="M6 8L1 3h10z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <ul class="submenu" role="menu">
+                                    <li><a href="hindalco.html">Hindalco</a></li>
+                                    <li><a href="railway.html">Railway</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <button class="submenu-toggle" aria-expanded="false" role="menuitem">
+                                    Under Commissioning
+                                    <svg class="icon-chevron" width="10" height="10" viewBox="0 0 12 12"
+                                        aria-hidden="true">
+                                        <path d="M6 8L1 3h10z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <ul class="submenu" role="menu">
+                                    <li><a href="tata-project.html">TATA Project</a></li>
+                                    <li><a href="stercore.html">Stercore</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <button class="submenu-toggle" aria-expanded="false" role="menuitem">
+                                    Upcoming
+                                    <svg class="icon-chevron" width="10" height="10" viewBox="0 0 12 12"
+                                        aria-hidden="true">
+                                        <path d="M6 8L1 3h10z" fill="currentColor" />
+                                    </svg>
+                                </button>
+                                <ul class="submenu" role="menu">
+                                    <li><a href="srikakulam.html">Srikakulam</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Contact -->
+                    <li class="nav-item" role="none">
+                        <a href="contact.html" class="nav-link nav-link--cta" role="menuitem">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="headerMobileToggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false" aria-controls="headerMobileMenu">
+                    <span class="hamburger-line" aria-hidden="true"></span>
+                    <span class="hamburger-line" aria-hidden="true"></span>
+                    <span class="hamburger-line" aria-hidden="true"></span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="headerMobileMenu" aria-hidden="true">
+            <div class="mobile-menu__header">
+                <span class="mobile-menu__title">Menu</span>
+                <button class="mobile-menu__close" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu content injected via JS -->
+        </div>
+    </header>
+    <!-- header man end -->
+
+
+    <!-- banner two swiper start -->
+    <div class="banner-two-swiper-start">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- 1 -->
+                <div class="swiper-slide">
+                    <div class="banner-two-main-wrapper-solaric seven">
+                        <div class="container">
+                            <div class="row justify-content-center text-center custom-container">
+                                <div class="col-lg-6">
+                                    <!-- <div class="banner-solari-2-content ptb--100 ptb_sm--130 banner-text-container">
+                                        <h1 class="banner-title">Innovation that</h1>
+                                        <h1 class="banner-title">powers the planet</h1>
+                                    </div> -->
+
+                                    <div class="banner-solari-2-content">
+                                        <div class="banner-text-container">
+                                            <h1 class="banner-title">Innovation that <br> powers the planet</h1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="swiper-slide">
+                    <div class="banner-two-main-wrapper-solaric nine">
+                        <div class="container">
+                            <div class="row justify-content-center text-center custom-container">
+                                <div class="col-12">
+
+                                    <!-- <div class="banner-solari-2-content ptb--100 ptb_sm--130  banner-text-container">
+                                        <h1 class="banner-title">Innovating Clean Energy</h1>
+                                        <h1 class="banner-title">for a Connected World</h1>
+                                    </div> -->
+
+                                    <div class="banner-solari-2-content">
+                                        <div class="banner-text-container">
+                                            <h1 class="banner-title">Innovating clean energy <br> for a connected world
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="swiper-slide">
+                    <div class="banner-two-main-wrapper-solaric six">
+                        <div class="container">
+                            <div class="row justify-content-center text-center custom-container">
+                                <div class="col-12">
+                                    <!-- <div class="banner-solari-2-content ptb--100 ptb_sm--130 banner-text-container">
+                                        <h1 class="banner-title">Advanced systems </h1>
+                                        <h1 class="banner-title">for a cleaner tomorrow</h1>
+                                    </div> -->
+
+                                    <div class="banner-solari-2-content">
+                                        <div class="banner-text-container">
+                                            <h1 class="banner-title">Advanced systems <br> for a cleaner tomorrow</h1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="swiper-slide">
+                    <div class="banner-two-main-wrapper-solaric ten">
+                        <div class="container">
+                            <div class="row justify-content-center text-center custom-container">
+                                <div class="col-12">
+                                    <div class="banner-solari-2-content">
+                                        <div class="banner-text-container">
+                                            <h1 class="banner-title">Net carbon zero <br> and ESG compliant</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="swiper-slide">
+                    <div class="banner-two-main-wrapper-solaric five">
+                        <div class="container">
+                            <div class="row justify-content-center text-center custom-container">
+                                <div class="col-12">
+                                    <div class="banner-solari-2-content">
+                                        <div class="banner-text-container">
+                                            <h1 class="banner-title">Engineering sustainability <br> in every cycle</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="swiper-slide">
+                    <div class="banner-two-main-wrapper-solaric four">
+                        <div class="container">
+                            <div class="row justify-content-center text-center custom-container">
+                                <div class="col-12">
+                                    <div class="banner-solari-2-content">
+                                        <div class="banner-text-container">
+                                            <h1 class="banner-title">Turning waste <br> into energy</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="swiper-slide">
+                    <div class="banner-two-main-wrapper-solaric three">
+                        <div class="container">
+                            <div class="row justify-content-center text-center custom-container">
+                                <div class="col-12">
+                                    <div class="banner-solari-2-content">
+                                        <div class="banner-text-container">
+                                            <h1 class="banner-title">Harness energy from <br> natural sources</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-carousel-controls">
+                    <button class="carousel-down" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span><img src="./assets/images/home/angle-left.png" alt=""></span> <!-- down icon -->
+                    </button>
+                    <button class="stop" id="stopBtn" type="button" onclick="stopCarousel()">
+                        <span><img src="./assets/images/home/pause.png" alt=""></span>
+                    </button>
+                    <button class="carousel-up" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span><img src="./assets/images/home/angle-right.png" alt=""></span> <!-- Up icon -->
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- banner two swiper end -->
+
+        <div class="modal fade" id="learnMoreModal" tabindex="-1" aria-labelledby="learnMoreModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="learnMoreModalLabel">Recovering energy from various sources</h5> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="mb-3">Recovering energy from various sources</h6>
+                        <ul class="list-unstyled ps-3">
+                            <li>Reforming comingled waste</li>
+                            <li>Thermo-catalytic conversion of waste into electricity</li>
+                            <li>Extraction of syngas</li>
+                            <li>Generation and utilisation of Solar power</li>
+                            <li>Generation and utilisation of wind power</li>
+                            <li>Hydro power implementation</li>
+                            <li>Bio-remediation</li>
+                            <li>Extraction of Hydrogen from syngas</li>
+                            <li>Electrolysis</li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div> -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="learnMoreModal2" tabindex="-1" aria-labelledby="learnMoreModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="learnMoreModalLabel2">Environmental Benefits</h5> -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="mb-3">Environmental Benefits</h6>
+                        <ul class="list-unstyled ps-3">
+                            <li>Negative Carbon Footprint</li>
+                            <li>Upto 1500 tonnes of annual carbon saving per tonne of waste to energy plant</li>
+                            <li>No pollution</li>
+                            <li>No emission</li>
+                            <li>No Dioxins and Furans</li>
+                            <li>Low particulate matter count</li>
+                            <li>Low Nitrogen Oxide & Sulphur Oxide emissions</li>
+                            <li>All readings & emissions below permissible limits worldwide</li>
+                            <li>Zero discharge – Maintains flora & fauna</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waste Management code starts from here -->
+
+        <div class="container text-center py-5">
+
+            <!-- <div class="title-area-center">
+                <h2 class="title  skew-up">
+                    Waste Management
+                </h2>
+            </div> -->
+            <!-- <h2 class="mb-4 fw-bold">Responsive Hover Card Overlay</h2> -->
+
+            <div class="row justify-content-center g-4">
+                <!-- Card 1 starts -->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="./green-energy.html">
+                            <img src="./assets/images/home/waste-management/Green Energy.jpg" alt="Sample"
+                                class="card-img" loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">Green Energy</p>
+                            <div class="overlay-content">
+                                <p class="mb-0">Advanced green energy solutions integrate water purification, green
+                                    carbon, and nano-charcoal technologies. From solar-powered purification systems to
+                                    biomass-derived carbon materials and nano-scale charcoal for filtration and
+                                    remediation, these innovations address water scarcity, pollution control, and carbon
+                                    sequestration while promoting circular resource use and sustainable environmental
+                                    management.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 1 ends -->
+
+                <!-- Card 2 starts-->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="./coal-gasification.html">
+                            <img src="./assets/images/home/waste-management/Coal Gasification.jpg" alt="Sample"
+                                class="card-img" loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">Coal Gasification</p>
+                            <div class="overlay-content">
+                                <p class="mb-0">Coal-Based Methane (CBM) is natural gas trapped within coal seams.
+                                    Extracted through drilled wells and controlled dewatering, CBM provides cleaner
+                                    energy, improves mine safety, and lowers emissions. Advanced recovery methods can
+                                    further enhance output while enabling CO₂ sequestration, making CBM a more efficient
+                                    and environmentally responsible energy source.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 2 ends-->
+
+                <!-- Card 3 starts-->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="./carbon-trading.html">
+                            <img src="./assets/images/home/waste-management/Carbon Trading.jpg" alt="Sample"
+                                class="card-img" loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">Carbon Trading</p>
+                            <div class="overlay-content">
+                                <p class="mb-0">Carbon trading is a market-based system that helps reduce greenhouse gas
+                                    emissions by assigning a financial value to carbon. It enables organizations to meet
+                                    climate goals efficiently while supporting sustainable projects worldwide.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 3 ends -->
+
+
+                <!-- Card 4 starts-->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="./nuclear-reactor.html">
+                            <img src="./assets/images/home/waste-management/Nuclear Sector.jpg" alt="Sample"
+                                class="card-img" loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">Nuclear Sector</p>
+                            <div class="overlay-content">
+                                <p class="mb-0">Next-generation nuclear technologies combine fusion and advanced fission
+                                    to deliver clean, reliable energy. Small modular fusion reactors offer inherent
+                                    safety, minimal waste, and no meltdown risk, while molten thorium salt reactors
+                                    provide efficient, low-pressure fission with enhanced sustainability. Together,
+                                    these modular systems enable scalable, low-carbon power with strong safety and
+                                    environmental advantages.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 4 ends-->
+
+                <!-- Card 5 starts-->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="./minerales&mines.html">
+                            <img src="./assets/images/home/waste-management/Minerals & Mines.jpg" alt="Sample"
+                                class="card-img" loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">Minerals &amp; Mines</p>
+                            <div class="overlay-content">
+                                <p class="mb-0">Integrated EPC solutions support large-scale mining and energy
+                                    infrastructure across coal, copper, oil shale, and tight oil projects. From
+                                    geological assessment and mine development to processing plants, logistics, and
+                                    environmental systems, end-to-end execution ensures efficient resource extraction,
+                                    regulatory compliance, and long-term operational reliability.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 5 ends-->
+
+                <!-- Card 6 start -->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="./green-transsportation.html">
+                            <img src="./assets/images/home/waste-management/Green-Infrastructure.jpg" alt="Sample"
+                                class="card-img" loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">Green Transportation</p>
+                            <div class="overlay-content">
+                                <p class="mb-0">Green transportation solutions span electric vehicles with fast charging
+                                    and battery swapping, hydrogen fuel cell and cryogenic hydrogen engines, and
+                                    methanol-based fuel systems. Together, these technologies reduce emissions, support
+                                    long-range and heavy-duty mobility, enable rapid refuelling, and integrate renewable
+                                    energy to create scalable, low-carbon transport ecosystems.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Card 7 start -->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="./ai.html">
+                            <img src="./assets/images/home/waste-management/AI.jpg" alt="Sample" class="card-img"
+                                loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">Artificial Intelligence</p>
+                            <div class="overlay-content">
+                                <p class="mb-0">Artificial intelligence enables intelligent robotics, high-performance
+                                    data centres, personalized education, and advanced technical training. From
+                                    autonomous systems and AI infrastructure to adaptive learning platforms and digital
+                                    skill development, AI drives productivity, efficiency, and innovation across
+                                    industries while supporting scalable, human-centric technological transformation.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8 start -->
+                <div class=" col-sm-6 col-md-4 col-lg-4">
+                    <div class="hover-card"><a href="javascript:void(0)">
+                            <img src="./assets/images/home/waste-management/KWG.jpg" alt="Sample" class="card-img"
+                                loading="lazy">
+                            <div class="bg-overlay">&nbsp;</div>
+                            <p class="hover-card-text">KWG Ventures</p>
+                            <div class="overlay-content">
+                                <p class="mb-0"></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Waste Management code ends here -->
+        <!-- service heign area start -->
+        <div class="rts-service-area-height-solari rts-section-gap position-relative">
+            <!-- <span class="stok-bg images-r">
+            Our Approach
+        </span> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-area-center">
+                            <!-- <p class="pre  skew-up">
+                            <span> Our</span> Approach
+                        </p> -->
+                            <h2 class="title  skew-up">
+                                One Stop Solution
+                            </h2>
+                            <p>We integrate solutions for a society with our expertise to achieve circular economy with
+                                utmost efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-24 mt--20">
+                    <div class="col-xl-4 col-lg-4 col-sm-6 col-sm-6 col-12">
+                        <!-- ignle service height solari -->
+                        <div class="single-solari-service-start">
+                            <div class="icon-area">
+                                <img src="./assets/images/home/ti.jpg" alt="" loading="lazy">
+                            </div>
+                            <a href="service-details.html">
+                                <h5 class="title">Optimized Deployments</h5>
+                            </a>
+                            <p class="disc">
+                                Precision-engineered solutions for deploying decentralized waste-to-energy plants
+                                ranging
+                                from 10 TPD to 10,000 TPD capacity — designed for scalability, efficiency, and
+                                sustainability.
+                            </p>
+                        </div>
+                        <!-- ignle service height solari end -->
+                    </div>
+                    <!-- <div class="col-xl-3 col-lg-4 col-sm-6 col-sm-6 col-12">
+                    
+                    <div class="single-solari-service-start two">
+                        <div class="icon-area">
+                            <img src="./assets/images/home/home/APPROACH/icon-2.png" alt="">
+                        </div>
+                        <a href="service-details.html">
+                            <h5 class="title">Quantity is not a problem, just pick a number!</h5>
+                        </a>
+                        <p class="disc">
+                            PPL team is equipped to provide solutions for daily waste quantity
+                            varying from as small as 100 kg/ day to over 1 Million tonnes/ day. The waste can be
+                            reformed on the same day as generated.
+                        </p>
+                    </div>
+                    
+                </div> -->
+                    <div class="col-xl-4 col-lg-4 col-sm-6 col-sm-6 col-12">
+                        <!-- ignle service height solari -->
+                        <div class="single-solari-service-start three">
+                            <div class="icon-area">
+                                <img src="./assets/images/home/pb.jpg" alt="" loading="lazy">
+                            </div>
+                            <a href="service-details.html">
+                                <h5 class="title">Preserve Biodiversity</h5>
+                            </a>
+                            <p class="disc">
+                                Innovative technologies that minimize landfilling and water pollution — reducing habitat
+                                loss, preventing ecological degradation, and conserving biodiversity for future
+                                generations.
+
+                            </p>
+                        </div>
+                        <!-- ignle service height solari end -->
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-sm-6 col-sm-6 col-12">
+                        <!-- ignle service height solari -->
+                        <div class="single-solari-service-start four">
+                            <div class="icon-area">
+                                <img src="./assets/images/home/ia.jpg" alt="" loading="lazy">
+                            </div>
+                            <a href="service-details.html">
+                                <h5 class="title">Integrated Approach</h5>
+                            </a>
+                            <p class="disc">
+
+                                A comprehensive approach that unites technology, installation, operation, and management
+                                —
+                                ensuring seamless project execution from concept to commissioning.
+                            </p>
+                        </div>
+                        <!-- ignle service height solari end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- service heign area end -->
+
+        <!-- our working proces area start -->
+        <div class="our-working-process-start rts-section-gap">
+            <!-- <span class="stok-bg images-r">
+            Work Process
+        </span> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title-area-center">
+                            <p class="pre  skew-up">
+                                <!-- <span> Our</span> Working Process -->
+                            </p>
+                            <h2 class="title  skew-up">
+                                The Enecovery Advantage
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-24 mt-0 justify-content-center">
+                    <div class="col-md-2 col-12">
+                        <!-- single solari steps area staert -->
+                        <div class="single-solari-steps-start">
+                            <div class="thumbnail">
+                                <img src="./assets/images/home/en.jpg" alt="steps" loading="lazy">
+                                <div class="steps">
+                                    <span>01</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">End-to-End Solution</h5>
+                                <p>Complete turnkey systems for harnessing energy from diverse natural and industrial
+                                    waste resources.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- single solari steps area end -->
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <!-- single solari steps area staert -->
+                        <div class="single-solari-steps-start">
+                            <div class="thumbnail">
+                                <img src="./assets/images/home/en-im.jpg" alt="steps" loading="lazy">
+                                <div class="steps">
+                                    <span>02</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Best-in Class
+                                    Technologies</h5>
+                                <p>Partnering with globally renowned leaders to deploy cutting-edge clean energy and
+                                    recovery systems.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- single solari steps area end -->
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <!-- single solari steps area staert -->
+                        <div class="single-solari-steps-start">
+                            <div class="thumbnail">
+                                <img src="./assets/images/home/home/advantage/advantage-3.png" alt="steps"
+                                    loading="lazy">
+                                <div class="steps">
+                                    <span>03</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Eco-friendly
+                                    Solutions</h5>
+                                <p>Green technologies that promote circular economies while preserving biodiversity and
+                                    natural balance.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- single solari steps area end -->
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <!-- single solari steps area staert -->
+                        <div class="single-solari-steps-start">
+                            <div class="thumbnail">
+                                <img src="./assets/images/home/home/advantage/advantage-4.png" alt="steps"
+                                    loading="lazy">
+                                <div class="steps">
+                                    <span>04</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">O&M Support
+                                </h5>
+                                <p>Dedicated and skilled teams for seamless operation, monitoring, and long-term
+                                    system reliability.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- single solari steps area end -->
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <!-- single solari steps area staert -->
+                        <div class="single-solari-steps-start">
+                            <div class="thumbnail">
+                                <img src="./assets/images/home/home/advantage/advantage-5.png" alt="steps"
+                                    loading="lazy">
+                                <div class="steps">
+                                    <span>05</span>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Promotes
+                                    Sustainability</h5>
+                                <p>Transforming natural and waste resources into clean energy for a balanced,
+                                    eco-conscious future.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- single solari steps area end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- our working proces area end -->
+
+        <!-- Footer style two -->
+        <!-- rts footer two area start -->
+        <div class="rts-footer-one  footer-bg-two">
+            <div class="shape-image-f-2 d-none">
+                <img src="assets/images/footer/07.png" alt="shape-footer">
+            </div>
+            <div class="container">
+                <div class="row pt--90  pb--55 pb_sm--40">
+                    <div class="col-lg-12">
+                        <div class="single-footer-one-wrapper two">
+                            <div class="single-footer-component first">
+                                <a href="index.html" class="logo-area-footer">
+                                    <img src="assets/images/logo/Enecovery-White-Logo-Final.svg" alt="logo"
+                                        style="width: 250px;" loading="lazy">
+                                </a>
+                                <div class="body mt--45">
+                                    <p class="disc">
+                                        Enecovery is a sustainability-driven company committed to powering a
+                                        greener future.
+                                    </p>
+                                    <div class="rts-social-style-one">
+                                        <ul>
+                                            <!-- <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </li> -->
+                                            <li>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa-brands fa-linkedin-in"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-footer-component">
+                                <div class="title-area">
+                                    <h5 class="title">Links</h5>
+                                </div>
+                                <div class="body">
+                                    <div class="pages-footer">
+                                        <ul>
+
+
+                                            <li>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa-regular fa-chevron-right"></i>
+                                                    <p>Services </p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="./global-presence.html">
+                                                    <i class="fa-regular fa-chevron-right"></i>
+                                                    <p>Global Presence & Ecosystem </p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa-regular fa-chevron-right"></i>
+                                                    <p>Sustainability & Impact </p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa-regular fa-chevron-right"></i>
+                                                    <p>Media </p>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa-regular fa-chevron-right"></i>
+                                                    <p>Careers </p>
+                                                </a>
+                                            </li>
+
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-footer-component last">
+                                <div class="title-area">
+                                    <h5 class="title">INDIA</h5>
+                                </div>
+                                <div class="body">
+                                    <!-- footer contact area start -->
+                                    <div class="footer-contact-wrapper-2">
+                                        <!-- single contact area start -->
+                                        <div class="contact-single">
+                                            <div class="icon">
+
+                                                <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.4688 7.3125C15.4688 6.55078 16.0547 5.90625 16.875 5.90625C17.6367 5.90625 18.2812 6.55078 18.2812 7.3125C18.2812 8.13281 17.6367 8.71875 16.875 8.71875C16.0547 8.71875 15.4688 8.13281 15.4688 7.3125ZM15.9961 19.0312C14.1211 16.6875 9.84375 11.0039 9.84375 7.78125C9.84375 3.91406 12.9492 0.75 16.875 0.75C20.7422 0.75 23.9062 3.91406 23.9062 7.78125C23.9062 11.0039 19.5703 16.6875 17.6953 19.0312C17.2852 19.6172 16.4062 19.6172 15.9961 19.0312ZM21.4453 9.83203C21.8555 8.89453 22.0312 8.25 22.0312 7.78125C22.0312 4.96875 19.6875 2.625 16.875 2.625C14.0039 2.625 11.7188 4.96875 11.7188 7.78125C11.7188 8.25 11.8359 8.89453 12.2461 9.83203C12.5977 10.7695 13.1836 11.7656 13.7695 12.7617C14.7656 14.4023 15.9375 15.9844 16.875 17.1562C17.7539 15.9844 18.9258 14.4023 19.9219 12.7617C20.5078 11.7656 21.0938 10.7695 21.4453 9.83203ZM23.7305 13.8164C23.7305 13.875 23.6719 13.875 23.6133 13.875C24.082 13.0547 24.5508 12.1758 24.9023 11.3555L31.8164 8.60156C32.6953 8.25 33.75 8.89453 33.75 9.89062V25.7695C33.75 26.3555 33.3984 26.8828 32.8125 27.0586L23.7305 30.6914C23.5547 30.8086 23.3789 30.8086 23.1445 30.75L10.3125 27.0586L1.875 30.457C0.996094 30.8086 0 30.1641 0 29.168L0 13.2891C0 12.7031 0.292969 12.1758 0.878906 12L8.08594 9.07031C8.20312 9.71484 8.37891 10.3008 8.61328 10.8867L1.875 13.582L1.875 28.4648L9.375 25.4766V18.5625C9.375 18.0938 9.78516 17.625 10.3125 17.625C10.7813 17.625 11.25 18.0938 11.25 18.5625V25.3594L22.5 28.582V18.5625C22.5 18.0938 22.9102 17.625 23.4375 17.625C23.9062 17.625 24.375 18.0938 24.375 18.5625V28.4648L31.875 25.4766V10.5937L23.7305 13.8164Z"
+                                                        fill="#f26f21" />
+                                                </svg>
+
+                                            </div>
+                                            <div class="info-content">
+                                                <a href="javascript:void(0)">
+                                                    <h6 class="title">
+                                                        Enecovery Waste Solutions Pvt. Ltd.
+                                                        505 5th floor Express Chamber, 72 Andheri kurla road, Andheri
+                                                        (East), Mumbai 400069
+                                                        <!-- CIN -U74999MH2018PTC312415  -->
+                                                    </h6>
+                                                </a>
+                                                <!-- <span>Berlin, Germany</span> -->
+                                            </div>
+                                        </div>
+                                        <!-- single contact area end -->
+                                        <!-- single contact area start -->
+                                        <div class="contact-single">
+                                            <div class="icon">
+
+                                                <svg width="30" height="23" viewBox="0 0 30 23" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M26.25 0.5C28.3008 0.5 30 2.19922 30 4.25V19.25C30 21.3594 28.3008 23 26.25 23H3.75C1.64063 23 0 21.3594 0 19.25L0 4.25C0 2.19922 1.64063 0.5 3.75 0.5L26.25 0.5ZM3.75 2.375C2.69531 2.375 1.875 3.25391 1.875 4.25V6.35938L13.3008 14.9727C14.2969 15.7344 15.6445 15.7344 16.6406 14.9727L28.125 6.41797V4.25C28.125 3.25391 27.2461 2.375 26.25 2.375L3.75 2.375ZM28.125 19.25V8.70312L17.8125 16.4375C16.9336 17.082 15.9375 17.4336 15 17.4336C14.0039 17.4336 13.0078 17.082 12.1875 16.4375L1.875 8.70312L1.875 19.25C1.875 20.3047 2.69531 21.125 3.75 21.125H26.25C27.2461 21.125 28.125 20.3047 28.125 19.25Z"
+                                                        fill="#f26f21" />
+                                                </svg>
+
+                                            </div>
+                                            <div class="info-content">
+                                                <a href="mailto:info@enecovery.com">
+                                                    <h6 class="title">info@enecovery.com</h6>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <!-- single contact area end -->
+                                        <!-- single contact area start -->
+                                        <!-- <div class="contact-single">
+                                        <div class="icon">
+                                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.5332 21.1589L12.5385 22.04C13.16 24.5227 14.4784 26.8062 16.3178 28.5859L18.0781 27.2989C18.8822 26.6994 19.987 26.7381 20.7603 27.3742L24.6985 30.4454C25.5518 31.103 25.7825 32.323 25.3143 33.2699L23.2386 37.1746C23.0513 37.5534 22.7254 37.8092 22.3702 38.0143C21.8628 38.3072 21.2674 38.448 20.6485 38.1963C15.3952 36.8316 11.0703 33.4423 8.375 28.7739C5.67969 24.1055 4.90689 18.6654 6.35167 13.4334C6.63048 12.3929 7.53602 11.7348 8.56085 11.752L12.9803 11.9068C14.0344 11.9747 14.9463 12.7338 15.1184 13.8523L15.8091 18.7985C15.9734 19.7862 15.4544 20.7624 14.5332 21.1589ZM15.5922 30.4933C12.9875 28.2083 11.2004 25.1129 10.5239 21.7146C10.471 21.2715 10.6583 20.8928 11.0643 20.6584L13.7479 19.4473C13.7479 19.4473 13.7479 19.4473 13.7987 19.418C13.9002 19.3594 14.0231 19.2207 13.986 19.0392L13.1645 14.1008C13.1781 13.89 12.9887 13.7963 12.8286 13.7534L8.43847 13.6494C8.35843 13.628 8.30769 13.6573 8.25695 13.6866C8.15546 13.7452 8.10472 13.7745 8.06182 13.9346C6.79646 18.657 7.48712 23.6032 9.94805 27.8657C12.409 32.1281 16.398 35.1701 21.1204 36.4355C21.3605 36.4998 21.5127 36.4119 21.5556 36.2518L23.6606 32.3978C23.7035 32.2377 23.6664 32.0562 23.5278 31.9333L19.6402 28.8327C19.5016 28.7098 19.24 28.7255 19.1679 28.8348L16.7772 30.5534C16.4512 30.8092 15.9496 30.7606 15.5922 30.4933ZM22.2779 5.86222C27.3534 6.45011 31.8069 9.35917 34.3558 13.7739C36.9339 18.2393 37.2264 23.5507 35.1978 28.2402C35.1042 28.4296 34.9813 28.5682 34.829 28.6561C34.5753 28.8026 34.263 28.8476 33.9936 28.7325C33.484 28.5531 33.2926 27.987 33.5013 27.5282C35.2704 23.3269 35.0171 18.6694 32.732 14.7114C30.4761 10.8041 26.5693 8.256 22.0462 7.68745C21.5445 7.63881 21.15 7.18997 21.2494 6.65898C21.2981 6.15729 21.7469 5.76284 22.2779 5.86222ZM20.673 11.0513C24.3664 11.3546 27.668 13.4403 29.4844 16.5864C31.3301 19.7832 31.4855 23.6853 29.9016 27.0355C29.8079 27.2249 29.6557 27.3128 29.5035 27.4007C29.2497 27.5472 28.9374 27.5922 28.6173 27.5064C28.1292 27.2469 27.9377 26.6809 28.1971 26.1928C29.5295 23.4614 29.4133 20.2133 27.8606 17.5239C26.3371 14.8852 23.5823 13.1605 20.5507 12.9487C19.9982 12.9293 19.6038 12.4805 19.6231 11.9281C19.6718 11.4264 20.1206 11.0319 20.673 11.0513ZM19.8921 16.8471C21.8031 16.7587 23.5954 17.7536 24.5622 19.4282C25.5583 21.1535 25.5238 23.2031 24.4917 24.8139C24.3688 24.9525 24.2673 25.0111 24.1151 25.099C23.8614 25.2455 23.469 25.269 23.1703 25.1032C22.7329 24.8144 22.5922 24.2191 22.881 23.7818C23.5814 22.7684 23.6337 21.4527 22.9892 20.3364C22.3739 19.2708 21.2084 18.6582 19.9806 18.7581C19.4574 18.7895 19.0122 18.37 18.9808 17.8469C18.9494 17.3237 19.369 16.8785 19.8921 16.8471Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+                                        </div>
+                                        <div class="info-content ml-dec-5">
+                                            <a href="tel:+4733378901">
+                                                <h6 class="title">+23 5825-32535</h6>
+                                            </a>
+                                            
+                                        </div>
+                                    </div> -->
+                                        <!-- single contact area end -->
+                                    </div>
+                                    <!-- footer contact area end -->
+                                </div>
+                            </div>
+                            <div class="single-footer-component last">
+                                <div class="title-area">
+                                    <h5 class="title">UK</h5>
+                                </div>
+                                <div class="body">
+                                    <!-- footer contact area start -->
+                                    <div class="footer-contact-wrapper-2">
+                                        <!-- single contact area start -->
+                                        <div class="contact-single">
+                                            <div class="icon">
+
+                                                <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M15.4688 7.3125C15.4688 6.55078 16.0547 5.90625 16.875 5.90625C17.6367 5.90625 18.2812 6.55078 18.2812 7.3125C18.2812 8.13281 17.6367 8.71875 16.875 8.71875C16.0547 8.71875 15.4688 8.13281 15.4688 7.3125ZM15.9961 19.0312C14.1211 16.6875 9.84375 11.0039 9.84375 7.78125C9.84375 3.91406 12.9492 0.75 16.875 0.75C20.7422 0.75 23.9062 3.91406 23.9062 7.78125C23.9062 11.0039 19.5703 16.6875 17.6953 19.0312C17.2852 19.6172 16.4062 19.6172 15.9961 19.0312ZM21.4453 9.83203C21.8555 8.89453 22.0312 8.25 22.0312 7.78125C22.0312 4.96875 19.6875 2.625 16.875 2.625C14.0039 2.625 11.7188 4.96875 11.7188 7.78125C11.7188 8.25 11.8359 8.89453 12.2461 9.83203C12.5977 10.7695 13.1836 11.7656 13.7695 12.7617C14.7656 14.4023 15.9375 15.9844 16.875 17.1562C17.7539 15.9844 18.9258 14.4023 19.9219 12.7617C20.5078 11.7656 21.0938 10.7695 21.4453 9.83203ZM23.7305 13.8164C23.7305 13.875 23.6719 13.875 23.6133 13.875C24.082 13.0547 24.5508 12.1758 24.9023 11.3555L31.8164 8.60156C32.6953 8.25 33.75 8.89453 33.75 9.89062V25.7695C33.75 26.3555 33.3984 26.8828 32.8125 27.0586L23.7305 30.6914C23.5547 30.8086 23.3789 30.8086 23.1445 30.75L10.3125 27.0586L1.875 30.457C0.996094 30.8086 0 30.1641 0 29.168L0 13.2891C0 12.7031 0.292969 12.1758 0.878906 12L8.08594 9.07031C8.20312 9.71484 8.37891 10.3008 8.61328 10.8867L1.875 13.582L1.875 28.4648L9.375 25.4766V18.5625C9.375 18.0938 9.78516 17.625 10.3125 17.625C10.7813 17.625 11.25 18.0938 11.25 18.5625V25.3594L22.5 28.582V18.5625C22.5 18.0938 22.9102 17.625 23.4375 17.625C23.9062 17.625 24.375 18.0938 24.375 18.5625V28.4648L31.875 25.4766V10.5937L23.7305 13.8164Z"
+                                                        fill="#f26f21" />
+                                                </svg>
+
+                                            </div>
+                                            <div class="info-content">
+                                                <a href="javascript:void(0)">
+                                                    <h6 class="title">Enecovery Ltd.
+                                                        Building No. 7, Paynes Park, Hitchin
+                                                        Hertfordshire, SG5 1EH, England
+
+                                                    </h6>
+                                                </a>
+                                                <!-- <span>Berlin, Germany</span> -->
+                                            </div>
+                                        </div>
+                                        <!-- single contact area end -->
+                                        <!-- single contact area start -->
+                                        <div class="contact-single">
+                                            <div class="icon">
+
+                                                <svg width="30" height="23" viewBox="0 0 30 23" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M26.25 0.5C28.3008 0.5 30 2.19922 30 4.25V19.25C30 21.3594 28.3008 23 26.25 23H3.75C1.64063 23 0 21.3594 0 19.25L0 4.25C0 2.19922 1.64063 0.5 3.75 0.5L26.25 0.5ZM3.75 2.375C2.69531 2.375 1.875 3.25391 1.875 4.25V6.35938L13.3008 14.9727C14.2969 15.7344 15.6445 15.7344 16.6406 14.9727L28.125 6.41797V4.25C28.125 3.25391 27.2461 2.375 26.25 2.375L3.75 2.375ZM28.125 19.25V8.70312L17.8125 16.4375C16.9336 17.082 15.9375 17.4336 15 17.4336C14.0039 17.4336 13.0078 17.082 12.1875 16.4375L1.875 8.70312L1.875 19.25C1.875 20.3047 2.69531 21.125 3.75 21.125H26.25C27.2461 21.125 28.125 20.3047 28.125 19.25Z"
+                                                        fill="#f26f21" />
+                                                </svg>
+
+                                            </div>
+                                            <div class="info-content">
+                                                <a href="mailto:info@enecovery.com">
+                                                    <h6 class="title">info@enecovery.com</h6>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <!-- single contact area end -->
+                                        <!-- single contact area start -->
+                                        <!-- <div class="contact-single">
+                                        <div class="icon">
+                                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.5332 21.1589L12.5385 22.04C13.16 24.5227 14.4784 26.8062 16.3178 28.5859L18.0781 27.2989C18.8822 26.6994 19.987 26.7381 20.7603 27.3742L24.6985 30.4454C25.5518 31.103 25.7825 32.323 25.3143 33.2699L23.2386 37.1746C23.0513 37.5534 22.7254 37.8092 22.3702 38.0143C21.8628 38.3072 21.2674 38.448 20.6485 38.1963C15.3952 36.8316 11.0703 33.4423 8.375 28.7739C5.67969 24.1055 4.90689 18.6654 6.35167 13.4334C6.63048 12.3929 7.53602 11.7348 8.56085 11.752L12.9803 11.9068C14.0344 11.9747 14.9463 12.7338 15.1184 13.8523L15.8091 18.7985C15.9734 19.7862 15.4544 20.7624 14.5332 21.1589ZM15.5922 30.4933C12.9875 28.2083 11.2004 25.1129 10.5239 21.7146C10.471 21.2715 10.6583 20.8928 11.0643 20.6584L13.7479 19.4473C13.7479 19.4473 13.7479 19.4473 13.7987 19.418C13.9002 19.3594 14.0231 19.2207 13.986 19.0392L13.1645 14.1008C13.1781 13.89 12.9887 13.7963 12.8286 13.7534L8.43847 13.6494C8.35843 13.628 8.30769 13.6573 8.25695 13.6866C8.15546 13.7452 8.10472 13.7745 8.06182 13.9346C6.79646 18.657 7.48712 23.6032 9.94805 27.8657C12.409 32.1281 16.398 35.1701 21.1204 36.4355C21.3605 36.4998 21.5127 36.4119 21.5556 36.2518L23.6606 32.3978C23.7035 32.2377 23.6664 32.0562 23.5278 31.9333L19.6402 28.8327C19.5016 28.7098 19.24 28.7255 19.1679 28.8348L16.7772 30.5534C16.4512 30.8092 15.9496 30.7606 15.5922 30.4933ZM22.2779 5.86222C27.3534 6.45011 31.8069 9.35917 34.3558 13.7739C36.9339 18.2393 37.2264 23.5507 35.1978 28.2402C35.1042 28.4296 34.9813 28.5682 34.829 28.6561C34.5753 28.8026 34.263 28.8476 33.9936 28.7325C33.484 28.5531 33.2926 27.987 33.5013 27.5282C35.2704 23.3269 35.0171 18.6694 32.732 14.7114C30.4761 10.8041 26.5693 8.256 22.0462 7.68745C21.5445 7.63881 21.15 7.18997 21.2494 6.65898C21.2981 6.15729 21.7469 5.76284 22.2779 5.86222ZM20.673 11.0513C24.3664 11.3546 27.668 13.4403 29.4844 16.5864C31.3301 19.7832 31.4855 23.6853 29.9016 27.0355C29.8079 27.2249 29.6557 27.3128 29.5035 27.4007C29.2497 27.5472 28.9374 27.5922 28.6173 27.5064C28.1292 27.2469 27.9377 26.6809 28.1971 26.1928C29.5295 23.4614 29.4133 20.2133 27.8606 17.5239C26.3371 14.8852 23.5823 13.1605 20.5507 12.9487C19.9982 12.9293 19.6038 12.4805 19.6231 11.9281C19.6718 11.4264 20.1206 11.0319 20.673 11.0513ZM19.8921 16.8471C21.8031 16.7587 23.5954 17.7536 24.5622 19.4282C25.5583 21.1535 25.5238 23.2031 24.4917 24.8139C24.3688 24.9525 24.2673 25.0111 24.1151 25.099C23.8614 25.2455 23.469 25.269 23.1703 25.1032C22.7329 24.8144 22.5922 24.2191 22.881 23.7818C23.5814 22.7684 23.6337 21.4527 22.9892 20.3364C22.3739 19.2708 21.2084 18.6582 19.9806 18.7581C19.4574 18.7895 19.0122 18.37 18.9808 17.8469C18.9494 17.3237 19.369 16.8785 19.8921 16.8471Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+                                        </div>
+                                        <div class="info-content ml-dec-5">
+                                            <a href="tel:+44 07740611649">
+                                                <h6 class="title">+44 07740611649</h6>
+                                            </a>
+
+                                        </div>
+                                    </div> -->
+                                        <!-- single contact area end -->
+                                    </div>
+                                    <!-- footer contact area end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb--20 pt--20 border-top-copyright">
+                    <div class="col-lg-12">
+                        <!-- copyright area start -->
+                        <div class="copyright-area-two">
+                            <div class="left">
+                                <p>Copyright 2026. All Rights Reserved.</p>
+                            </div>
+                            <!-- <div class="right">
+                        <ul>
+                            <li><a href="javascript:void(0)">Terms & conditions</a></li>
+                            <li><a href="javascript:void(0)">Privacy policy</a></li>
+                        </ul>
+                    </div> -->
+                        </div>
+                        <!-- copyright area end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- rts footer area one end -->
+        <!-- Footer style two End -->
+
+        <!-- header style two -->
+
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                    style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+                </path>
+            </svg>
+        </div>
+
+
+        <!-- pre loader start -->
+        <div id="elevate-load">
+            <div class="loader-wrapper">
+                <div class="lds-ellipsis">
+                    <img src="./assets/images/home/start-1.png" alt="">
+
+                </div>
+            </div>
+        </div>
+        <!-- pre loader end -->
+
+
+        <div class="search-input-area">
+            <div class="container">
+                <div class="search-input-inner">
+                    <div class="input-div">
+                        <input id="searchInput1" class="search-input" type="text" placeholder="Search by keyword or #">
+                        <button><i class="far fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
+        </div>
+
+        <div id="anywhere-home" class="">
+        </div>
+
+
+        <!-- jquery js -->
+        <script src="assets/js/plugins/jquery.min.js"></script>
+        <script src="assets/js/vendor/jqueryui.js"></script>
+        <script src="assets/js/plugins/counter-up.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/plugins/metismenu.js"></script>
+        <script src="assets/js/vendor/waypoint.js"></script>
+        <script src="assets/js/vendor/waw.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="assets/js/plugins/scrolltigger.js"></script>
+        <script src="assets/js/vendor/split-text.js"></script>
+        <script src="assets/js/vendor/contact.form.js"></script>
+        <script src="assets/js/vendor/split-type.js"></script>
+        <script src="assets/js/plugins/jquery-timepicker.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/vendor/magnific-popup.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <!-- header style two End -->
+
+
+        <script>
+            const swiper = new Swiper('.swiper-container', {
+                effect: 'fade',
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                fadeEffect: {
+                    crossFade: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.carousel-up',
+                    prevEl: '.carousel-down',
+                },
+            });
+
+            function stopCarousel() {
+                swiper.autoplay.stop();
+            }
+
+
+
+
+
+
+            /**
+* Enecovery Header Module
+* Optimized, accessible, and performant navigation
+*/
+
+            class HeaderNavigation {
+                constructor() {
+                    this.header = document.getElementById('header');
+                    this.mobileToggle = document.getElementById('headerMobileToggle');
+                    this.mobileMenu = document.getElementById('headerMobileMenu');
+                    this.scrollThreshold = 150;
+                    this.lastScrollY = 0;
+                    this.ticking = false;
+
+                    this.init();
+                }
+
+                init() {
+                    this.initStickyHeader();
+                    this.initMobileMenu();
+                    this.initDropdowns();
+                    this.initKeyboardNavigation();
+                    this.initMobileMenuContent();
+                }
+
+                /**
+                 * Sticky Header with IntersectionObserver (Better Performance)
+                 */
+                initStickyHeader() {
+                    // Use IntersectionObserver for better performance than scroll events
+                    const sentinel = document.createElement('div');
+                    sentinel.style.position = 'absolute';
+                    sentinel.style.top = `${this.scrollThreshold}px`;
+                    sentinel.style.height = '1px';
+                    sentinel.style.pointerEvents = 'none';
+                    document.body.prepend(sentinel);
+
+                    const observer = new IntersectionObserver(
+                        ([entry]) => {
+                            this.header.classList.toggle('is-sticky', !entry.isIntersecting);
+                        },
+                        { threshold: 0 }
+                    );
+
+                    observer.observe(sentinel);
+
+                    // Fallback for older browsers
+                    if (!window.IntersectionObserver) {
+                        this.initLegacySticky();
+                    }
+                }
+
+                /**
+                 * Legacy scroll-based sticky (fallback)
+                 */
+                initLegacySticky() {
+                    window.addEventListener('scroll', () => {
+                        if (!this.ticking) {
+                            window.requestAnimationFrame(() => {
+                                const shouldStick = window.scrollY > this.scrollThreshold;
+                                this.header.classList.toggle('is-sticky', shouldStick);
+                                this.ticking = false;
+                            });
+                            this.ticking = true;
+                        }
+                    }, { passive: true });
+                }
+
+                /**
+                 * Mobile Menu Toggle
+                 */
+                initMobileMenu() {
+                    // Create backdrop
+                    this.backdrop = document.createElement('div');
+                    this.backdrop.className = 'mobile-menu-backdrop';
+                    document.body.appendChild(this.backdrop);
+
+                    // Toggle event
+                    this.mobileToggle.addEventListener('click', () => this.toggleMobileMenu());
+                    this.backdrop.addEventListener('click', () => this.closeMobileMenu());
+
+                    // Close button
+                    const closeBtn = this.mobileMenu.querySelector('.mobile-menu__close');
+                    if (closeBtn) {
+                        closeBtn.addEventListener('click', () => this.closeMobileMenu());
+                    }
+
+                    // Escape key
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && this.mobileMenu.classList.contains('is-active')) {
+                            this.closeMobileMenu();
+                        }
+                    });
+                }
+
+                toggleMobileMenu() {
+                    const isOpen = this.mobileMenu.classList.contains('is-active');
+                    isOpen ? this.closeMobileMenu() : this.openMobileMenu();
+                }
+
+                openMobileMenu() {
+                    this.mobileMenu.classList.add('is-active');
+                    this.backdrop.classList.add('is-active');
+                    this.mobileToggle.setAttribute('aria-expanded', 'true');
+                    this.mobileMenu.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+
+                    // Focus trap
+                    this.mobileMenu.querySelector('button, a')?.focus();
+                }
+
+                closeMobileMenu() {
+                    this.mobileMenu.classList.remove('is-active');
+                    this.backdrop.classList.remove('is-active');
+                    this.mobileToggle.setAttribute('aria-expanded', 'false');
+                    this.mobileMenu.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                    this.mobileToggle.focus();
+                }
+
+                /**
+                 * Clone desktop nav to mobile menu
+                 */
+                initMobileMenuContent() {
+                    const desktopNav = document.querySelector('.navbar__nav');
+                    const mobileContent = document.createElement('div');
+                    mobileContent.className = 'mobile-menu__content';
+
+                    // Clone and transform structure for mobile
+                    const mobileList = document.createElement('ul');
+                    mobileList.className = 'mobile-nav-list';
+
+                    desktopNav.querySelectorAll(':scope > li').forEach(item => {
+                        const mobileItem = this.createMobileNavItem(item);
+                        mobileList.appendChild(mobileItem);
+                    });
+
+                    mobileContent.appendChild(mobileList);
+                    this.mobileMenu.appendChild(mobileContent);
+                }
+
+                createMobileNavItem(desktopItem) {
+                    const li = document.createElement('li');
+                    li.className = 'mobile-nav-item';
+
+                    const hasDropdown = desktopItem.classList.contains('has-dropdown');
+                    const link = desktopItem.querySelector('.nav-link');
+
+                    if (hasDropdown) {
+                        const toggleBtn = document.createElement('button');
+                        toggleBtn.className = 'mobile-nav-link';
+                        toggleBtn.innerHTML = `
+        ${link.textContent.trim()}
+        <svg class="icon-chevron" width="16" height="16" viewBox="0 0 12 12">
+          <path d="M6 8L1 3h10z" fill="currentColor"/>
+        </svg>
+      `;
+
+                        const dropdown = document.createElement('ul');
+                        dropdown.className = 'mobile-dropdown';
+
+                        // Clone dropdown items
+                        const originalDropdown = desktopItem.querySelector('.dropdown-menu');
+                        if (originalDropdown) {
+                            this.cloneDropdownItems(originalDropdown, dropdown);
+                        }
+
+                        toggleBtn.addEventListener('click', () => {
+                            const isOpen = dropdown.classList.contains('is-open');
+                            dropdown.classList.toggle('is-open', !isOpen);
+                            toggleBtn.querySelector('.icon-chevron').style.transform =
+                                isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                        });
+
+                        li.appendChild(toggleBtn);
+                        li.appendChild(dropdown);
+                    } else {
+                        const a = document.createElement('a');
+                        a.className = 'mobile-nav-link';
+                        a.href = link.href;
+                        a.textContent = link.textContent.trim();
+                        li.appendChild(a);
+                    }
+
+                    return li;
+                }
+
+                cloneDropdownItems(source, target) {
+                    source.querySelectorAll(':scope > li').forEach(item => {
+                        const hasSubmenu = item.classList.contains('has-submenu');
+                        const isMegaColumn = item.classList.contains('mega-column');
+
+                        if (isMegaColumn) {
+                            // Handle mega menu columns (e.g., Sector dropdown)
+                            const strong = item.querySelector('strong');
+                            if (strong) {
+                                const headerLi = document.createElement('li');
+                                headerLi.style.cssText = 'padding: 0.75rem 0.5rem 0.25rem; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary-color); opacity: 0.8; border-top: 1px solid rgba(0,0,0,0.08); margin-top: 0.25rem;';
+                                headerLi.textContent = strong.textContent.trim();
+                                target.appendChild(headerLi);
+                            }
+                            // Clone all links in this column
+                            item.querySelectorAll('ul a').forEach(link => {
+                                const li = document.createElement('li');
+                                const a = document.createElement('a');
+                                a.href = link.href;
+                                a.textContent = link.textContent.trim();
+                                li.appendChild(a);
+                                target.appendChild(li);
+                            });
+                        } else if (hasSubmenu) {
+                            const toggle = item.querySelector('.submenu-toggle');
+                            const submenu = item.querySelector('.submenu');
+
+                            const subToggle = document.createElement('button');
+                            subToggle.className = 'mobile-nav-link';
+                            subToggle.style.paddingLeft = '1rem';
+                            subToggle.innerHTML = `
+          ${toggle.textContent.trim()}
+          <svg class="icon-chevron" width="14" height="14" viewBox="0 0 12 12">
+            <path d="M6 8L1 3h10z" fill="currentColor"/>
+          </svg>
+        `;
+
+                            const subDropdown = document.createElement('ul');
+                            subDropdown.className = 'mobile-dropdown';
+
+                            submenu.querySelectorAll('a').forEach(subLink => {
+                                const subLi = document.createElement('li');
+                                const a = document.createElement('a');
+                                a.href = subLink.href;
+                                a.textContent = subLink.textContent.trim();
+                                subLi.appendChild(a);
+                                subDropdown.appendChild(subLi);
+                            });
+
+                            subToggle.addEventListener('click', () => {
+                                const isOpen = subDropdown.classList.contains('is-open');
+                                subDropdown.classList.toggle('is-open', !isOpen);
+                            });
+
+                            const wrapper = document.createElement('li');
+                            wrapper.appendChild(subToggle);
+                            wrapper.appendChild(subDropdown);
+                            target.appendChild(wrapper);
+                        } else {
+                            const a = item.querySelector('a');
+                            if (a) {
+                                const li = document.createElement('li');
+                                const link = document.createElement('a');
+                                link.href = a.href;
+                                link.textContent = a.textContent.trim();
+                                li.appendChild(link);
+                                target.appendChild(li);
+                            }
+                        }
+                    });
+                }
+
+                /**
+                 * Desktop Dropdown Accessibility
+                 */
+                initDropdowns() {
+                    document.querySelectorAll('.has-dropdown > .nav-link').forEach(trigger => {
+                        trigger.addEventListener('click', (e) => {
+                            // Only handle click if it's a button (not a link)
+                            if (trigger.tagName === 'BUTTON') {
+                                e.preventDefault();
+                                const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+                                this.closeAllDropdowns();
+                                trigger.setAttribute('aria-expanded', !isExpanded);
+                            }
+                        });
+                    });
+
+                    // Close dropdowns when clicking outside
+                    document.addEventListener('click', (e) => {
+                        if (!e.target.closest('.has-dropdown')) {
+                            this.closeAllDropdowns();
+                        }
+                    });
+                }
+
+                closeAllDropdowns() {
+                    document.querySelectorAll('.has-dropdown > .nav-link').forEach(trigger => {
+                        trigger.setAttribute('aria-expanded', 'false');
+                    });
+                }
+
+                /**
+                 * Keyboard Navigation Support
+                 */
+                initKeyboardNavigation() {
+                    this.header.addEventListener('keydown', (e) => {
+                        const current = document.activeElement;
+
+                        switch (e.key) {
+                            case 'ArrowDown':
+                                if (current.classList.contains('nav-link')) {
+                                    e.preventDefault();
+                                    const dropdown = current.nextElementSibling;
+                                    if (dropdown) {
+                                        const firstItem = dropdown.querySelector('a, button');
+                                        firstItem?.focus();
+                                    }
+                                }
+                                break;
+
+                            case 'Escape':
+                                this.closeAllDropdowns();
+                                if (this.mobileMenu.classList.contains('is-active')) {
+                                    this.closeMobileMenu();
+                                }
+                                break;
+                        }
+                    });
+                }
+            }
+
+            // Initialize when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => new HeaderNavigation());
+            } else {
+                new HeaderNavigation();
+            }
+
+
+
+        </script>
+
+
+
+</body>
+
+</html>

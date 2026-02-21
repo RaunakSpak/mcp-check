@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="image" href="./assets/images/home/coal-gasification-1.jpg" fetchpriority="high">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/enecovery-fav.png">
+    <!-- Primary Meta Tags -->
+        <title>Thermo-Catalytic Conversion Module</title>
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons (Vanilla JS version - deferred for performance) -->
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome-6.css">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper.css">
+    <link rel="stylesheet" href="assets/css/plugins/unicons.css">
+    <link rel="stylesheet" href="assets/css/plugins/metismenu.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./changes.css">
+
+    <style>
+        /* * SCOPED CSS 
+         * All classes are prefixed with 'tcc-' to prevent conflicts 
+         * when embedding into an existing website.
+         */
+
+        .tcc-wrapper {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+            line-height: 1.6;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .tcc-wrapper *,
+        .tcc-wrapper *::before,
+        .tcc-wrapper *::after {
+            box-sizing: inherit;
+        }
+
+        /* Typography */
+        .tcc-h1,
+        .tcc-h2,
+        .tcc-h3,
+        .tcc-h4 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 0;
+            color: #0f172a;
+        }
+
+        .tcc-h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .tcc-h3 {
+            /* font-size: 1.25rem; */
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .tcc-h4 {
+            /* font-size: 1rem; */
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tcc-text-small {
+            font-size: 0.875rem;
+        }
+
+        .tcc-text-muted {
+            color: #64748b;
+        }
+
+        .tcc-font-bold {
+            font-weight: 700;
+        }
+
+        /* Cards */
+        .tcc-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.2s;
+        }
+
+        .tcc-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Section: About Text */
+        .tcc-highlight-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tcc-highlight-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(20, 184, 166, 0.1);
+            /* Teal Highlight */
+            border-bottom-left-radius: 100%;
+        }
+
+        .tcc-tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            /* font-size: 0.75rem; */
+            font-weight: 700;
+            margin: 0 4px;
+        }
+
+        .tcc-tag-orange {
+            background: #ffedd5;
+            color: #9a3412;
+            border: 1px solid #fed7aa;
+        }
+
+        .tcc-tag-green {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+
+        /* Section: Process Flow */
+        .tcc-process-header {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            /* font-size: 0.875rem; */
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .tcc-process-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .tcc-process-grid {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+        }
+
+        .tcc-col-inputs,
+        .tcc-col-outputs {
+            flex: 1;
+            width: 100%;
+        }
+
+        .tcc-input-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .tcc-input-item {
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .tcc-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #fb923c;
+            border-radius: 50%;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        /* Center Unit */
+        .tcc-unit-container {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .tcc-unit-card {
+            background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+            color: white;
+            padding: 3.5rem;
+            border-radius: 16px;
+            text-align: center;
+            width: 240px;
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .tcc-arrow-desktop {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: -7%;
+            right: -7%;
+            height: 2px;
+            background-image: linear-gradient(to right, #cbd5e1 50%, transparent 50%);
+            background-size: 10px 100%;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+
+        @media (min-width: 1024px) {
+            .tcc-arrow-desktop {
+                display: block;
+            }
+        }
+
+        /* Output Items */
+        .tcc-output-item {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* font-size: 0.875rem; */
+            font-weight: 700;
+        }
+
+        .tcc-bg-teal {
+            background: #f0fdfa;
+            border: 1px solid #ccfbf1;
+            color: #134e4a;
+        }
+
+        .tcc-bg-blue {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            color: #1e3a8a;
+        }
+
+        .tcc-bg-slate {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: #1e293b;
+        }
+
+        .tcc-bg-cyan {
+            background: #ecfeff;
+            border: 1px solid #cffafe;
+            color: #155e75;
+        }
+
+        /* Section: Monetization */
+        .tcc-monetization-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .tcc-monetization-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .tcc-money-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .tcc-money-icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+
+        .tcc-icon-oil {
+            background: #ffedd5;
+            color: #ea580c;
+        }
+
+        .tcc-icon-water {
+            background: #cffafe;
+            color: #0891b2;
+        }
+
+        .tcc-check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tcc-check-list li {
+            display: flex;
+            align-items: center;
+            /* font-size: 0.875rem; */
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+
+        .tcc-check-icon {
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Section: Derivatives Tree */
+        .tcc-tree-root {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Tree Node Styling */
+        .tcc-node-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .tcc-node-row {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .tcc-label-box {
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            min-width: 140px;
+            z-index: 2;
+        }
+
+        .tcc-bg-dark {
+            background: #1e293b;
+        }
+
+        .tcc-bg-primary {
+            background: #1e3a8a;
+        }
+
+        /* Hydrocarbons blue */
+        .tcc-bg-accent {
+            background: #4f46e5;
+        }
+
+        /* Syngas indigo */
+        .tcc-bg-secondary {
+            background: #334155;
+        }
+
+        /* Power slate */
+
+        /* Connector Lines */
+        .tcc-connector-h {
+            display: none;
+            height: 2px;
+            background: #cbd5e1;
+            width: 3rem;
+            margin-top: 2.25rem;
+        }
+
+        @media (min-width: 768px) {
+            .tcc-connector-h {
+                display: block;
+            }
+        }
+
+        .tcc-connector-v-container {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid #cbd5e1;
+            margin-left: 0;
+            margin-top: 1rem;
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .tcc-connector-v-container {
+                margin-left: 0;
+                margin-top: 0;
+                padding-left: 2rem;
+                border-left: 2px solid #cbd5e1;
+            }
+
+            /* Hide the main border for the top level, use specific logic if needed, 
+               but for this layout, we manually place lines */
+        }
+
+        /* Sub-branches */
+        .tcc-branch-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .tcc-sub-branch {
+            position: relative;
+        }
+
+        .tcc-branch-line-h {
+            position: absolute;
+            left: -2rem;
+            /* Matches padding-left of container */
+            top: 1.25rem;
+            width: 2rem;
+            height: 2px;
+            background: #cbd5e1;
+        }
+
+        .tcc-syngas-box {
+            background: #eef2ff;
+            border: 1px solid #e0e7ff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .tcc-eou-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #e0e7ff;
+            color: #3730a3;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 4px 8px;
+            border-bottom-left-radius: 8px;
+            border-top-right-radius: 12px;
+        }
+
+        .tcc-derivative-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .tcc-derivative-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Adjusted grid for dense content */
+        @media (min-width: 1024px) {
+            .tcc-derivative-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .tcc-derivative-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e7ff;
+        }
+
+        /* Spanning items */
+        .tcc-span-2 {
+            grid-column: span 1;
+        }
+
+        @media(min-width: 640px) {
+            .tcc-span-2 {
+                grid-column: span 2;
+            }
+        }
+
+        .tcc-derivative-title {
+            /* font-size: 0.875rem; */
+            font-weight: 700;
+            color: #4338ca;
+            border-bottom: 1px solid #eef2ff;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tcc-derivative-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .tcc-derivative-list li {
+            margin-bottom: 3px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tcc-derivative-list li::before {
+            content: '•';
+            margin-right: 6px;
+            color: #a5b4fc;
+        }
+
+        .tcc-sub-arrow::before {
+            content: '↳' !important;
+            margin-left: 8px;
+        }
+
+        .tcc-nested-item {
+            padding-left: 12px;
+            color: #475569;
+            font-style: italic;
+        }
+
+        /* Utility */
+        .tcc-flex-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .tcc-mb-4 {
+            margin-bottom: 1rem;
+        }
+
+        .tcc-mt-2 {
+            margin-top: 0.5rem;
+        }
+    </style>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V755PK392P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-V755PK392P');
+    </script>
+</head>
+
+<body>
+    <!-- header man start -->
+    <div class="header-main-h2 header--sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="main-haeder-wrapper-h2 d-flex justify-content-between align-items-center custom-navbar">
+                        <a href="index.html" class="logo-area">
+                            <img src="assets/images/logo/Enecovery-Green-Logo-Final.svg" alt="logo" class="logo" />
+                        </a>
+                        <div class="header-nav main-nav-one d-lg-block navbar-right-container none">
+                            <nav>
+                                <div class="navbar-right">
+                                    <ul id="navLinks" class="d-flex header-nav gap-4 mb-0">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                About Us
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                                <li class="dropdown-submenu">
+                                                    <a class="#" href="aboutus.html">Who We Are</a>
+                                                </li>
+                                                <hr>
+                                                <li class="dropdown-submenu">
+                                                    <a href="our-journey.html">Enecovery Journey</a>
+                                                </li>
+                                                <hr>
+                                                <!-- Submenu -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-item dropdown-toggle" href="#"
+                                                        data-toggle="dropdown">Our Team</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="./core-team.html">Core
+                                                                Team</a></li>
+                                                        <hr>
+                                                        <!-- <li><a class="dropdown-item"
+                                                                href="./associate&alliance.html">Advisors & Associate</a></li>
+                                                        <hr> -->
+                                                        <li><a class="dropdown-item" href="#">Technician</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Sector
+                                            </a>
+
+                                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+
+                                                <!-- 1. Green Energy -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-toggle" href="#">Green Energy</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="./waste-to-enegry.html">Waste
+                                                                to Energy</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item"
+                                                                href="./sludge-management.html">Sludge Management</a>
+                                                        </li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item"
+                                                                href="./water-purification.html">Water
+                                                                Purification</a>
+                                                        </li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./green-carbon.html">Green
+                                                                Carbon</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./nano-charcoal.html">Nano
+                                                                Charcoal</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- 2. Technologies -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-toggle" href="./carbon-trading.html">Carbon
+                                                        Trading</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Catalyst – TCC</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="#">Catalyst – HCC</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item"
+                                                                href="./water-purification.html">Water Purification</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- 3. Coal Gasification -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-toggle" href="#">Coal Gasification</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="" href="./cbm.html">Coal Based
+                                                                Methane
+                                                                (CBM)</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- 4. Nuclear Reactor -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-toggle" href="#">Nuclear Reactor</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="" href="./smfr.html">Small Modular
+                                                                Fusion
+                                                                Reactor</a></li>
+                                                        <hr>
+                                                        <li>
+                                                            <a class="" href="./smmtsbfr.html">
+                                                                Small Modular Molten Thorium Salt Based Fission Reactor
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- 5. Infrastructure -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-toggle" href="#">Minerals & Mines</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="./coal.html">Coal</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./copper.html">Copper</a>
+                                                        </li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./oil-shale.html">Oil
+                                                                Shale</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./tight-oil.html">Tight
+                                                                Oil</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- 6. Green Transportation -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-toggle" href="#">Green Transportation</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <a class="" href="./electric-vehicles.html">
+                                                                Electric Sector with Swap Charging Stations
+                                                            </a>
+                                                        </li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item"
+                                                                href="./hydrogen-fuel-cell-vehicles.html">Hydrogen Fuel
+                                                                Cells</a>
+                                                        </li>
+                                                        <hr>
+                                                        <li>
+                                                            <a class=""
+                                                                href="./hydrogen-cryogenic-engines.html">
+                                                                Hydrogen Based Cryogenic Engines
+                                                            </a>
+                                                        </li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item"
+                                                                href="./methanol-fuel-cells.html">Methanol Fuel Cell</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- 7. Artificial Intelligence -->
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-toggle" href="#">Artificial Intelligence</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="./robotics.html">Robotics</a>
+                                                        </li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="data-centres.html">Data
+                                                                Centres</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./aI-education.html">AI
+                                                                Education</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item"
+                                                                href="./technical-training.html">Technical Training</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <!-- 8. KWG Ventures -->
+                                                <!-- <li class="dropdown-submenu prjects-submenu">
+                                                    <a class="dropdown-toggle" href="#">KWG Ventures</a>
+                                                </li> -->
+
+                                            </ul>
+                                        </li>
+
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Technologies
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                                <li class="dropdown-submenu">
+                                                    <a href="./tcc.html">Thermo-Catalytic
+                                                        Conversion (TCC)</a>
+                                                </li>
+                                                <hr>
+                                                <li class="dropdown-submenu">
+                                                    <a class="" href="./pdfs/CoalGasification-Technology2.pdf"
+                                                        target="_blank">Hydrogen Enriched Catalytic Coal
+                                                        Gasification (HCC)</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="./certifications&awards.html"
+                                                id="projectsDropdown" role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Certification & Awards
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                                <li class="dropdown-submenu">
+                                                    <a href="./assets/images/home/awards.jpg" target="_blank">Awards</a>
+                                                </li>
+                                                <hr>
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-item dropdown-toggle" href="#"
+                                                        data-toggle="dropdown">Patents</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item"
+                                                                href="https://patents.justia.com/inventor/raghavendra-rao-turlapati"
+                                                                target="_blank">USA Patent Certificate</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item"
+                                                                href="https://patents.justia.com/inventor/raghavendra-rao-turlapati"
+                                                                target="_blank">South Africa Patent Certificate</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                                <li class="dropdown-submenu prjects-submenu">
+                                                    <a class="dropdown-toggle" href="#">Commisioned</a>
+                                                    <hr>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="./hindalco.html">Hindalco</a>
+                                                        </li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./railway.html">Railway</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-submenu prjects-submenu">
+                                                    <a class="dropdown-toggle" href="#">Under Commisioning</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="./tata-project.html">TATA
+                                                                Project</a></li>
+                                                        <hr>
+                                                        <li><a class="dropdown-item" href="./stercore.html">Stercore</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <hr>
+                                                <li class="dropdown-submenu prjects-submenu">
+                                                    <a class="dropdown-toggle" href="#">Upcoming</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item"
+                                                                href="./srikakulam.html">Srikakulam</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="nav-link " href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                        </div>
+
+                        <!-- Actions Area (right side on all devices) -->
+                        <div class="d-flex align-items-center gap-3">
+                            <!-- Mobile Toggle -->
+                            <div class="mobile-toggle d-lg-none" id="mobileToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header man end -->
+
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+                <img fetchpriority="high" src="./assets/images/home/coal-gasification-1.jpg" class="d-block w-100" alt="..." width="1920" height="500">
+                <div class="carousel-caption d-md-block">
+                    <div class="rts-bread-crumb-area ">
+                        <div class="container ptb--65">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="con-tent-main">
+                                        <div class="wrapper">
+                                            <div class="title skew-up">
+                                                <a href="javascript:void(0)">Thermo-Catalytic Conversion</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="tcc-wrapper">
+
+        <!-- Section 1: Introduction -->
+        <div class="tcc-card">
+            <p style="margin-top: 1.5rem;">
+                <strong style="color:#0f172a;">Waste-to-Energy (WtE)</strong> is rapidly evolving from conventional
+                power generation into an integrated, carbon-neutral ecosystem that maximizes value recovery from waste.
+            </p>
+            <p style="margin-top: 1rem;">
+                Among emerging solutions, <strong style="color:#0d9488;">thermo-catalytic conversion</strong> stands out
+                as the most promising technology, capable of transforming unsegregated municipal solid waste (MSW),
+                plastics, rubber, and industrial residues often with up to 50% moisture into clean hydrocarbons (gas and
+                oil), bio-carbon, and water.
+            </p>
+
+            <div class="tcc-highlight-box">
+                <h4 class="tcc-h4 tcc-flex-center">
+                    <i data-lucide="settings-2" width="18" height="18" style="margin-right: 8px; color: #0d9488;"></i>
+                    Process Overview & Output Streams
+                </h4>
+                <p style="margin-top: 0.5rem;">
+                    Operating at moderate temperatures of about <span class="tcc-tag tcc-tag-orange">450-600°C</span>,
+                    thermo-catalytic conversion requires no pre-treatment, segregation, or drying, enabling same-day
+                    waste-to-resource conversion that prevents biological decomposition.
+                </p>
+                <p style="margin-top: 1rem;">
+                    With a negative carbon footprint of <span class="tcc-tag tcc-tag-green">-2.5 to -4.5 kg CO2</span>
+                    per kg of waste processed, this approach not only offsets disposal and fossil fuel costs but also
+                    contributes to decarbonization.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 2: Process Diagram -->
+        <div class="tcc-card" style="padding: 0; overflow: hidden;">
+            <div style="background: #f8fafc; padding: 1rem; border-bottom: 1px solid #e2e8f0;">
+                <div class="tcc-process-header" style="margin-bottom: 0; border: none; padding: 0;">
+                    <i data-lucide="activity" width="16" height="16"></i> Process Flow
+                </div>
+            </div>
+
+            <div style="padding: 2rem;">
+                <div class="tcc-process-grid">
+
+                    <!-- Inputs -->
+                    <div class="tcc-col-inputs">
+                        <div
+                            style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem;">
+                            <h4 class="tcc-h4"
+                                style="text-align: center; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                                Inputs
+                            </h4>
+                            <div class="tcc-input-list">
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> Municipal Solid Waste
+                                </div>
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> Waste Plastics
+                                </div>
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> Rubber Tyres
+                                </div>
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> Industrial Waste
+                                </div>
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> E-Waste
+                                </div>
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> Organic Waste
+                                </div>
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> Agro Plastics
+                                </div>
+                                <div class="tcc-input-item">
+                                    <div class="tcc-dot"></div> Oil Shale
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Unit -->
+                    <div class="tcc-unit-container">
+                        <div class="tcc-arrow-desktop"></div> <!-- Visual connector line -->
+                        <div class="tcc-unit-card">
+                            <div style="margin-bottom: 0.5rem; display: flex; justify-content: center;">
+                                <i data-lucide="flame" width="32" height="32"></i>
+                            </div>
+                            <div style="font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem;">
+                                Thermo-Catalytic Conversion
+                            </div>
+                            <div
+                                style="background: rgba(0,0,0,0.2); display: inline-block; padding: 2px 8px; border-radius: 4px; font-family: monospace;">
+                                450-600°C
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Outputs -->
+                    <div class="tcc-col-outputs">
+                        <div class="tcc-output-item tcc-bg-teal">
+                            <span>Liquid Hydrocarbon Fuel</span>
+                            <i data-lucide="droplet" width="16" height="16" style="opacity: 0.7;"></i>
+                        </div>
+                        <div class="tcc-output-item tcc-bg-blue">
+                            <span>Mixed Hydrocarbon Gas</span>
+                            <i data-lucide="wind" width="16" height="16" style="opacity: 0.7;"></i>
+                        </div>
+                        <div class="tcc-output-item tcc-bg-slate">
+                            <span>Carbon</span>
+                            <i data-lucide="hexagon" width="16" height="16" style="opacity: 0.7;"></i>
+                        </div>
+                        <div class="tcc-output-item tcc-bg-cyan">
+                            <span>Water</span>
+                            <i data-lucide="waves" width="16" height="16" style="opacity: 0.7;"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Monetization -->
+        <div class="tcc-card" style="background: linear-gradient(to bottom right, #ffffff, #f8fafc);">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <span class="tcc-tag"
+                    style="background:#fef9c3; color:#854d0e; border:1px solid #fde047; margin-bottom: 0.5rem;">REVENUE
+                    STREAMS</span>
+                <p class="tcc-h4" style="color: #334155;">Recovered oil and water streams are market-ready.</p>
+            </div>
+
+            <div class="tcc-monetization-grid">
+                <!-- Oil -->
+                <div class="tcc-money-card">
+                    <div class="tcc-flex-center tcc-mb-4">
+                        <div class="tcc-money-icon-box tcc-icon-oil">
+                            <i data-lucide="droplet" width="20" height="20"></i>
+                        </div>
+                        <span class="tcc-h3" style="margin:0;">Oil</span>
+                    </div>
+                    <ul class="tcc-check-list">
+                        <li>
+                            <i data-lucide="check-circle-2" class="tcc-check-icon" style="color: #f97316;"></i>
+                            Sell Diesel
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Water -->
+                <div class="tcc-money-card">
+                    <div class="tcc-flex-center tcc-mb-4">
+                        <div class="tcc-money-icon-box tcc-icon-water">
+                            <i data-lucide="waves" width="20" height="20"></i>
+                        </div>
+                        <span class="tcc-h3" style="margin:0;">Water</span>
+                    </div>
+                    <ul class="tcc-check-list">
+                        <li>
+                            <i data-lucide="check-circle-2" class="tcc-check-icon" style="color: #06b6d4;"></i>
+                            Process / Make-up water
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle-2" class="tcc-check-icon" style="color: #06b6d4;"></i>
+                            Flushing / Horticulture
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle-2" class="tcc-check-icon" style="color: #06b6d4;"></i>
+                            Potable water (after treatment)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Derivatives Tree -->
+        <div class="tcc-card">
+            <h3 class="tcc-h2" style="border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem; margin-bottom: 2rem;">
+                High Potential Downstream Derivatives</h3>
+
+            <div class="tcc-tree-root">
+
+                <!-- Carbon Node -->
+                <div class="tcc-node-row">
+                    <div class="tcc-label-box tcc-bg-dark">Carbon</div>
+                    <div class="tcc-connector-h"></div> <!-- Horizontal Line -->
+                    <div class="tcc-connector-v-container" style="border: none; padding-left: 0; margin-top: 0;">
+                        <!-- Adjust for top level item -->
+                        <div
+                            style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 8px; margin-left: 0;">
+                            <strong>Graphite</strong> (Anode Manufacturing for Li-ion battery)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hydrocarbons Node -->
+                <div class="tcc-node-row">
+                    <div class="tcc-label-box tcc-bg-primary" style="position: sticky; top: 1rem;">Hydrocarbons</div>
+
+                    <!-- Vertical Line Container for Branches -->
+                    <div style="position: relative; flex: 1;">
+
+                        <!-- Main Vertical Line (Desktop Only) -->
+                        <style>
+                            @media(min-width: 768px) {
+                                .tcc-connector-main-v {
+                                    display: block !important;
+                                }
+                            }
+                        </style>
+                        <div class="tcc-connector-main-v"
+                            style="position: absolute; left: -1rem; top: 50%; width: 1rem; height: 2px; background: #cbd5e1; display: none;">
+                        </div>
+                        <div class="tcc-connector-main-v"
+                            style="position: absolute; left: -1rem; top: 2rem; bottom: 3rem; width: 2px; background: #cbd5e1; display: none;">
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 2rem; padding-left: 0;">
+
+                            <!-- Branch: Syngas -->
+                            <div class="tcc-sub-branch">
+                                <!-- Visual Connector (Desktop only) -->
+                                <style>
+                                    @media(min-width: 768px) {
+                                        .tcc-branch-line-h {
+                                            display: block;
+                                        }
+                                    }
+                                </style>
+                                <div class="tcc-branch-line-h" style="display: none; left: -1rem; width: 1rem;"></div>
+
+                                <div class="tcc-text-muted tcc-text-small"
+                                    style="margin-bottom: 15px; font-style: italic;"></div>
+                                <div class="tcc-label-box tcc-bg-accent"
+                                    style="display: inline-block; margin-bottom: 1rem;">Syngas</div>
+
+                                <div class="tcc-syngas-box">
+                                    <div class="tcc-eou-badge">EOU • 100% Export</div>
+
+                                    <div class="tcc-derivative-grid">
+
+                                        <!-- Methanol Group -->
+                                        <div class="tcc-derivative-item tcc-span-2">
+                                            <div class="tcc-derivative-title">
+                                                <div
+                                                    style="width: 6px; height: 6px; background: #6366f1; border-radius: 50%; margin-right: 6px;">
+                                                </div>Methanol
+                                            </div>
+                                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                                <ul class="tcc-derivative-list">
+                                                    <li class="tcc-nested-item tcc-sub-arrow">Formaldehyde</li>
+                                                    <li class="tcc-nested-item tcc-sub-arrow">Polyacetal</li>
+                                                    <li class="tcc-nested-item tcc-sub-arrow">UF/PF/MF Resins</li>
+                                                    <li class="tcc-nested-item tcc-sub-arrow">Hexamine / Isopropene</li>
+                                                </ul>
+                                                <ul class="tcc-derivative-list">
+                                                    <li class="tcc-nested-item tcc-sub-arrow">MDI / Polyol / MTBE</li>
+                                                    <li class="tcc-nested-item tcc-sub-arrow">Acetic Acid <span
+                                                            class="tcc-nested-item">→ Vinyl Acetate</span>
+                                                    </li>
+                                                    <li class="tcc-nested-item tcc-sub-arrow">Chloromethanes</li>
+                                                    <li class="tcc-nested-item tcc-sub-arrow">MMA <span
+                                                            class="tcc-nested-item">→ PPMA</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Methyl Formate -->
+                                        <div class="tcc-derivative-item">
+                                            <div class="tcc-derivative-title">
+                                                <div
+                                                    style="width: 6px; height: 6px; background: #6366f1; border-radius: 50%; margin-right: 6px;">
+                                                </div>Methyl Formate
+                                            </div>
+                                            <ul class="tcc-derivative-list">
+                                                <li class="tcc-nested-item tcc-sub-arrow">Methyl Formamide</li>
+                                                <li class="tcc-nested-item tcc-sub-arrow">HCN</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Methylamines -->
+                                        <div class="tcc-derivative-item">
+                                            <div class="tcc-derivative-title">
+                                                <div
+                                                    style="width: 6px; height: 6px; background: #6366f1; border-radius: 50%; margin-right: 6px;">
+                                                </div>Methylamines / DME
+                                            </div>
+                                            <ul class="tcc-derivative-list">
+                                                <li class="tcc-nested-item tcc-sub-arrow">Ethanolamines</li>
+                                                <li class="tcc-nested-item tcc-sub-arrow">DMF</li>
+                                                <li class="tcc-nested-item tcc-sub-arrow">Carbamates</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Fisher-Tropsch -->
+                                        <div class="tcc-derivative-item">
+                                            <div class="tcc-derivative-title">
+                                                <div
+                                                    style="width: 6px; height: 6px; background: #6366f1; border-radius: 50%; margin-right: 6px;">
+                                                </div>Fisher-Tropsch
+                                            </div>
+                                            <ul class="tcc-derivative-list">
+                                                <li class="tcc-nested-item tcc-sub-arrow">Liquid Fuels</li>
+                                                <li class="tcc-nested-item tcc-sub-arrow">Waxes</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Hydrogen -->
+                                        <div class="tcc-derivative-item">
+                                            <div class="tcc-derivative-title">
+                                                <div
+                                                    style="width: 6px; height: 6px; background: #6366f1; border-radius: 50%; margin-right: 6px;">
+                                                </div>Hydrogen (+N₂)
+                                            </div>
+                                            <!-- <div style="font-size: 0.7rem; color:#94a3b8; margin-bottom: 4px;">(from Air
+                                                Separation Unit)</div> -->
+                                            <ul class="tcc-derivative-list">
+                                                <li class="tcc-nested-item tcc-sub-arrow">Ammonia</li>
+                                                <li class="tcc-nested-item tcc-sub-arrow">Ammonium Nitrate</li>
+                                                <li class="tcc-nested-item tcc-sub-arrow">Urea</li>
+                                                <li class="tcc-nested-item tcc-sub-arrow">Nitric Acid / Hexamine</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Branch: Power -->
+                            <div class="tcc-sub-branch">
+                                <!-- Visual Connector -->
+                                <div class="tcc-branch-line-h" style="display: none; left: -1rem; width: 1rem;"></div>
+
+                                <div class="tcc-text-muted tcc-text-small"
+                                    style="margin-bottom: 4px; font-style: italic;">via Gas Engine</div>
+                                <div class="tcc-label-box tcc-bg-secondary" style="display: inline-block;">Power</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center download-btn">
+            <a href="./pdfs/tcc.pdf" download="TCC-Brochure.pdf">Download PDF</a>
+        </div>
+
+
+    </div>
+
+    <!-- Footer style two -->
+    <div class="rts-footer-one  footer-bg-two">
+        <div class="shape-image-f-2 d-none">
+            <img loading="lazy" decoding="async" src="assets/images/footer/07.png" alt="shape-footer">
+        </div>
+        <div class="container">
+            <div class="row pt--90  pb--55 pb_sm--40">
+                <div class="col-lg-12">
+                    <div class="single-footer-one-wrapper two">
+                        <div class="single-footer-component first">
+                            <a href="index.html" class="logo-area-footer">
+                                <img src="assets/images/logo/Enecovery-White-Logo-Final.svg" alt="logo"
+                                    style="width: 250px;">
+                            </a>
+                            <div class="body mt--45">
+                                <p class="disc">
+                                    Enecovery is a sustainability-driven company committed to powering a
+                                    greener future.
+                                </p>
+                                <div class="rts-social-style-one">
+                                    <ul>
+                                        <!-- <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </a>
+                                        </li> -->
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-footer-component">
+                            <div class="title-area">
+                                <h5 class="title">Links</h5>
+                            </div>
+                            <div class="body">
+                                <div class="pages-footer">
+                                    <ul>
+
+
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-regular fa-chevron-right"></i>
+                                                <p>Services </p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./global-presence.html">
+                                                <i class="fa-regular fa-chevron-right"></i>
+                                                <p>Global Presence & Ecosystem </p>
+                                            </a>
+                                        </li>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-regular fa-chevron-right"></i>
+                                                <p>Sustainability & Impact </p>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                                <a href="./media.html">
+                                                    <i class="fa-regular fa-chevron-right"></i>
+                                                    <p>Media </p>
+                                                </a>
+                                            </li>
+
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-regular fa-chevron-right"></i>
+                                                <p>Careers </p>
+                                            </a>
+                                        </li>
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-footer-component last">
+                            <div class="title-area">
+                                <h5 class="title">INDIA</h5>
+                            </div>
+                            <div class="body">
+                                <!-- footer contact area start -->
+                                <div class="footer-contact-wrapper-2">
+                                    <!-- single contact area start -->
+                                    <div class="contact-single">
+                                        <div class="icon">
+
+                                            <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.4688 7.3125C15.4688 6.55078 16.0547 5.90625 16.875 5.90625C17.6367 5.90625 18.2812 6.55078 18.2812 7.3125C18.2812 8.13281 17.6367 8.71875 16.875 8.71875C16.0547 8.71875 15.4688 8.13281 15.4688 7.3125ZM15.9961 19.0312C14.1211 16.6875 9.84375 11.0039 9.84375 7.78125C9.84375 3.91406 12.9492 0.75 16.875 0.75C20.7422 0.75 23.9062 3.91406 23.9062 7.78125C23.9062 11.0039 19.5703 16.6875 17.6953 19.0312C17.2852 19.6172 16.4062 19.6172 15.9961 19.0312ZM21.4453 9.83203C21.8555 8.89453 22.0312 8.25 22.0312 7.78125C22.0312 4.96875 19.6875 2.625 16.875 2.625C14.0039 2.625 11.7188 4.96875 11.7188 7.78125C11.7188 8.25 11.8359 8.89453 12.2461 9.83203C12.5977 10.7695 13.1836 11.7656 13.7695 12.7617C14.7656 14.4023 15.9375 15.9844 16.875 17.1562C17.7539 15.9844 18.9258 14.4023 19.9219 12.7617C20.5078 11.7656 21.0938 10.7695 21.4453 9.83203ZM23.7305 13.8164C23.7305 13.875 23.6719 13.875 23.6133 13.875C24.082 13.0547 24.5508 12.1758 24.9023 11.3555L31.8164 8.60156C32.6953 8.25 33.75 8.89453 33.75 9.89062V25.7695C33.75 26.3555 33.3984 26.8828 32.8125 27.0586L23.7305 30.6914C23.5547 30.8086 23.3789 30.8086 23.1445 30.75L10.3125 27.0586L1.875 30.457C0.996094 30.8086 0 30.1641 0 29.168L0 13.2891C0 12.7031 0.292969 12.1758 0.878906 12L8.08594 9.07031C8.20312 9.71484 8.37891 10.3008 8.61328 10.8867L1.875 13.582L1.875 28.4648L9.375 25.4766V18.5625C9.375 18.0938 9.78516 17.625 10.3125 17.625C10.7813 17.625 11.25 18.0938 11.25 18.5625V25.3594L22.5 28.582V18.5625C22.5 18.0938 22.9102 17.625 23.4375 17.625C23.9062 17.625 24.375 18.0938 24.375 18.5625V28.4648L31.875 25.4766V10.5937L23.7305 13.8164Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="info-content">
+                                            <a href="javascript:void(0)">
+                                                    <h6 class="title">
+                                                        Enecovery Waste Solutions Pvt. Ltd.
+                                                        505 5th floor Express Chamber, 72 Andheri kurla road, Andheri
+                                                        (East), Mumbai 400069
+                                                        <!-- CIN -U74999MH2018PTC312415  -->
+                                                    </h6>
+                                                </a>
+                                            <!-- <span>Berlin, Germany</span> -->
+                                        </div>
+                                    </div>
+                                    <!-- single contact area end -->
+                                    <!-- single contact area start -->
+                                    <div class="contact-single">
+                                        <div class="icon">
+
+                                            <svg width="30" height="23" viewBox="0 0 30 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M26.25 0.5C28.3008 0.5 30 2.19922 30 4.25V19.25C30 21.3594 28.3008 23 26.25 23H3.75C1.64063 23 0 21.3594 0 19.25L0 4.25C0 2.19922 1.64063 0.5 3.75 0.5L26.25 0.5ZM3.75 2.375C2.69531 2.375 1.875 3.25391 1.875 4.25V6.35938L13.3008 14.9727C14.2969 15.7344 15.6445 15.7344 16.6406 14.9727L28.125 6.41797V4.25C28.125 3.25391 27.2461 2.375 26.25 2.375L3.75 2.375ZM28.125 19.25V8.70312L17.8125 16.4375C16.9336 17.082 15.9375 17.4336 15 17.4336C14.0039 17.4336 13.0078 17.082 12.1875 16.4375L1.875 8.70312L1.875 19.25C1.875 20.3047 2.69531 21.125 3.75 21.125H26.25C27.2461 21.125 28.125 20.3047 28.125 19.25Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="info-content">
+                                            <a href="mailto:info@enecovery.com">
+                                                <h4 class="title">info@enecovery.com</h4>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <!-- single contact area end -->
+                                    <!-- single contact area start -->
+                                    <!-- <div class="contact-single">
+                                        <div class="icon">
+                                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.5332 21.1589L12.5385 22.04C13.16 24.5227 14.4784 26.8062 16.3178 28.5859L18.0781 27.2989C18.8822 26.6994 19.987 26.7381 20.7603 27.3742L24.6985 30.4454C25.5518 31.103 25.7825 32.323 25.3143 33.2699L23.2386 37.1746C23.0513 37.5534 22.7254 37.8092 22.3702 38.0143C21.8628 38.3072 21.2674 38.448 20.6485 38.1963C15.3952 36.8316 11.0703 33.4423 8.375 28.7739C5.67969 24.1055 4.90689 18.6654 6.35167 13.4334C6.63048 12.3929 7.53602 11.7348 8.56085 11.752L12.9803 11.9068C14.0344 11.9747 14.9463 12.7338 15.1184 13.8523L15.8091 18.7985C15.9734 19.7862 15.4544 20.7624 14.5332 21.1589ZM15.5922 30.4933C12.9875 28.2083 11.2004 25.1129 10.5239 21.7146C10.471 21.2715 10.6583 20.8928 11.0643 20.6584L13.7479 19.4473C13.7479 19.4473 13.7479 19.4473 13.7987 19.418C13.9002 19.3594 14.0231 19.2207 13.986 19.0392L13.1645 14.1008C13.1781 13.89 12.9887 13.7963 12.8286 13.7534L8.43847 13.6494C8.35843 13.628 8.30769 13.6573 8.25695 13.6866C8.15546 13.7452 8.10472 13.7745 8.06182 13.9346C6.79646 18.657 7.48712 23.6032 9.94805 27.8657C12.409 32.1281 16.398 35.1701 21.1204 36.4355C21.3605 36.4998 21.5127 36.4119 21.5556 36.2518L23.6606 32.3978C23.7035 32.2377 23.6664 32.0562 23.5278 31.9333L19.6402 28.8327C19.5016 28.7098 19.24 28.7255 19.1679 28.8348L16.7772 30.5534C16.4512 30.8092 15.9496 30.7606 15.5922 30.4933ZM22.2779 5.86222C27.3534 6.45011 31.8069 9.35917 34.3558 13.7739C36.9339 18.2393 37.2264 23.5507 35.1978 28.2402C35.1042 28.4296 34.9813 28.5682 34.829 28.6561C34.5753 28.8026 34.263 28.8476 33.9936 28.7325C33.484 28.5531 33.2926 27.987 33.5013 27.5282C35.2704 23.3269 35.0171 18.6694 32.732 14.7114C30.4761 10.8041 26.5693 8.256 22.0462 7.68745C21.5445 7.63881 21.15 7.18997 21.2494 6.65898C21.2981 6.15729 21.7469 5.76284 22.2779 5.86222ZM20.673 11.0513C24.3664 11.3546 27.668 13.4403 29.4844 16.5864C31.3301 19.7832 31.4855 23.6853 29.9016 27.0355C29.8079 27.2249 29.6557 27.3128 29.5035 27.4007C29.2497 27.5472 28.9374 27.5922 28.6173 27.5064C28.1292 27.2469 27.9377 26.6809 28.1971 26.1928C29.5295 23.4614 29.4133 20.2133 27.8606 17.5239C26.3371 14.8852 23.5823 13.1605 20.5507 12.9487C19.9982 12.9293 19.6038 12.4805 19.6231 11.9281C19.6718 11.4264 20.1206 11.0319 20.673 11.0513ZM19.8921 16.8471C21.8031 16.7587 23.5954 17.7536 24.5622 19.4282C25.5583 21.1535 25.5238 23.2031 24.4917 24.8139C24.3688 24.9525 24.2673 25.0111 24.1151 25.099C23.8614 25.2455 23.469 25.269 23.1703 25.1032C22.7329 24.8144 22.5922 24.2191 22.881 23.7818C23.5814 22.7684 23.6337 21.4527 22.9892 20.3364C22.3739 19.2708 21.2084 18.6582 19.9806 18.7581C19.4574 18.7895 19.0122 18.37 18.9808 17.8469C18.9494 17.3237 19.369 16.8785 19.8921 16.8471Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+                                        </div>
+                                        <div class="info-content ml-dec-5">
+                                            <a href="tel:+4733378901">
+                                                <h4 class="title">+23 5825-32535</h4>
+                                            </a>
+                                            
+                                        </div>
+                                    </div> -->
+                                    <!-- single contact area end -->
+                                </div>
+                                <!-- footer contact area end -->
+                            </div>
+                        </div>
+                        <div class="single-footer-component last">
+                            <div class="title-area">
+                                <h5 class="title">UK</h5>
+                            </div>
+                            <div class="body">
+                                <!-- footer contact area start -->
+                                <div class="footer-contact-wrapper-2">
+                                    <!-- single contact area start -->
+                                    <div class="contact-single">
+                                        <div class="icon">
+
+                                            <svg width="34" height="31" viewBox="0 0 34 31" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M15.4688 7.3125C15.4688 6.55078 16.0547 5.90625 16.875 5.90625C17.6367 5.90625 18.2812 6.55078 18.2812 7.3125C18.2812 8.13281 17.6367 8.71875 16.875 8.71875C16.0547 8.71875 15.4688 8.13281 15.4688 7.3125ZM15.9961 19.0312C14.1211 16.6875 9.84375 11.0039 9.84375 7.78125C9.84375 3.91406 12.9492 0.75 16.875 0.75C20.7422 0.75 23.9062 3.91406 23.9062 7.78125C23.9062 11.0039 19.5703 16.6875 17.6953 19.0312C17.2852 19.6172 16.4062 19.6172 15.9961 19.0312ZM21.4453 9.83203C21.8555 8.89453 22.0312 8.25 22.0312 7.78125C22.0312 4.96875 19.6875 2.625 16.875 2.625C14.0039 2.625 11.7188 4.96875 11.7188 7.78125C11.7188 8.25 11.8359 8.89453 12.2461 9.83203C12.5977 10.7695 13.1836 11.7656 13.7695 12.7617C14.7656 14.4023 15.9375 15.9844 16.875 17.1562C17.7539 15.9844 18.9258 14.4023 19.9219 12.7617C20.5078 11.7656 21.0938 10.7695 21.4453 9.83203ZM23.7305 13.8164C23.7305 13.875 23.6719 13.875 23.6133 13.875C24.082 13.0547 24.5508 12.1758 24.9023 11.3555L31.8164 8.60156C32.6953 8.25 33.75 8.89453 33.75 9.89062V25.7695C33.75 26.3555 33.3984 26.8828 32.8125 27.0586L23.7305 30.6914C23.5547 30.8086 23.3789 30.8086 23.1445 30.75L10.3125 27.0586L1.875 30.457C0.996094 30.8086 0 30.1641 0 29.168L0 13.2891C0 12.7031 0.292969 12.1758 0.878906 12L8.08594 9.07031C8.20312 9.71484 8.37891 10.3008 8.61328 10.8867L1.875 13.582L1.875 28.4648L9.375 25.4766V18.5625C9.375 18.0938 9.78516 17.625 10.3125 17.625C10.7813 17.625 11.25 18.0938 11.25 18.5625V25.3594L22.5 28.582V18.5625C22.5 18.0938 22.9102 17.625 23.4375 17.625C23.9062 17.625 24.375 18.0938 24.375 18.5625V28.4648L31.875 25.4766V10.5937L23.7305 13.8164Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="info-content">
+                                            <a href="javascript:void(0)">
+                                                <h4 class="title">Enecovery Ltd.
+                                                    Building No. 7, Paynes Park, Hitchin
+                                                    Hertfordshire, SG5 1EH, England
+
+                                                </h4>
+                                            </a>
+                                            <!-- <span>Berlin, Germany</span> -->
+                                        </div>
+                                    </div>
+                                    <!-- single contact area end -->
+                                    <!-- single contact area start -->
+                                    <div class="contact-single">
+                                        <div class="icon">
+
+                                            <svg width="30" height="23" viewBox="0 0 30 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M26.25 0.5C28.3008 0.5 30 2.19922 30 4.25V19.25C30 21.3594 28.3008 23 26.25 23H3.75C1.64063 23 0 21.3594 0 19.25L0 4.25C0 2.19922 1.64063 0.5 3.75 0.5L26.25 0.5ZM3.75 2.375C2.69531 2.375 1.875 3.25391 1.875 4.25V6.35938L13.3008 14.9727C14.2969 15.7344 15.6445 15.7344 16.6406 14.9727L28.125 6.41797V4.25C28.125 3.25391 27.2461 2.375 26.25 2.375L3.75 2.375ZM28.125 19.25V8.70312L17.8125 16.4375C16.9336 17.082 15.9375 17.4336 15 17.4336C14.0039 17.4336 13.0078 17.082 12.1875 16.4375L1.875 8.70312L1.875 19.25C1.875 20.3047 2.69531 21.125 3.75 21.125H26.25C27.2461 21.125 28.125 20.3047 28.125 19.25Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+
+                                        </div>
+                                        <div class="info-content">
+                                            <a href="mailto:info@enecovery.com">
+                                                <h4 class="title">info@enecovery.com</h4>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <!-- single contact area end -->
+                                    <!-- single contact area start -->
+                                    <!-- <div class="contact-single">
+                                        <div class="icon">
+                                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.5332 21.1589L12.5385 22.04C13.16 24.5227 14.4784 26.8062 16.3178 28.5859L18.0781 27.2989C18.8822 26.6994 19.987 26.7381 20.7603 27.3742L24.6985 30.4454C25.5518 31.103 25.7825 32.323 25.3143 33.2699L23.2386 37.1746C23.0513 37.5534 22.7254 37.8092 22.3702 38.0143C21.8628 38.3072 21.2674 38.448 20.6485 38.1963C15.3952 36.8316 11.0703 33.4423 8.375 28.7739C5.67969 24.1055 4.90689 18.6654 6.35167 13.4334C6.63048 12.3929 7.53602 11.7348 8.56085 11.752L12.9803 11.9068C14.0344 11.9747 14.9463 12.7338 15.1184 13.8523L15.8091 18.7985C15.9734 19.7862 15.4544 20.7624 14.5332 21.1589ZM15.5922 30.4933C12.9875 28.2083 11.2004 25.1129 10.5239 21.7146C10.471 21.2715 10.6583 20.8928 11.0643 20.6584L13.7479 19.4473C13.7479 19.4473 13.7479 19.4473 13.7987 19.418C13.9002 19.3594 14.0231 19.2207 13.986 19.0392L13.1645 14.1008C13.1781 13.89 12.9887 13.7963 12.8286 13.7534L8.43847 13.6494C8.35843 13.628 8.30769 13.6573 8.25695 13.6866C8.15546 13.7452 8.10472 13.7745 8.06182 13.9346C6.79646 18.657 7.48712 23.6032 9.94805 27.8657C12.409 32.1281 16.398 35.1701 21.1204 36.4355C21.3605 36.4998 21.5127 36.4119 21.5556 36.2518L23.6606 32.3978C23.7035 32.2377 23.6664 32.0562 23.5278 31.9333L19.6402 28.8327C19.5016 28.7098 19.24 28.7255 19.1679 28.8348L16.7772 30.5534C16.4512 30.8092 15.9496 30.7606 15.5922 30.4933ZM22.2779 5.86222C27.3534 6.45011 31.8069 9.35917 34.3558 13.7739C36.9339 18.2393 37.2264 23.5507 35.1978 28.2402C35.1042 28.4296 34.9813 28.5682 34.829 28.6561C34.5753 28.8026 34.263 28.8476 33.9936 28.7325C33.484 28.5531 33.2926 27.987 33.5013 27.5282C35.2704 23.3269 35.0171 18.6694 32.732 14.7114C30.4761 10.8041 26.5693 8.256 22.0462 7.68745C21.5445 7.63881 21.15 7.18997 21.2494 6.65898C21.2981 6.15729 21.7469 5.76284 22.2779 5.86222ZM20.673 11.0513C24.3664 11.3546 27.668 13.4403 29.4844 16.5864C31.3301 19.7832 31.4855 23.6853 29.9016 27.0355C29.8079 27.2249 29.6557 27.3128 29.5035 27.4007C29.2497 27.5472 28.9374 27.5922 28.6173 27.5064C28.1292 27.2469 27.9377 26.6809 28.1971 26.1928C29.5295 23.4614 29.4133 20.2133 27.8606 17.5239C26.3371 14.8852 23.5823 13.1605 20.5507 12.9487C19.9982 12.9293 19.6038 12.4805 19.6231 11.9281C19.6718 11.4264 20.1206 11.0319 20.673 11.0513ZM19.8921 16.8471C21.8031 16.7587 23.5954 17.7536 24.5622 19.4282C25.5583 21.1535 25.5238 23.2031 24.4917 24.8139C24.3688 24.9525 24.2673 25.0111 24.1151 25.099C23.8614 25.2455 23.469 25.269 23.1703 25.1032C22.7329 24.8144 22.5922 24.2191 22.881 23.7818C23.5814 22.7684 23.6337 21.4527 22.9892 20.3364C22.3739 19.2708 21.2084 18.6582 19.9806 18.7581C19.4574 18.7895 19.0122 18.37 18.9808 17.8469C18.9494 17.3237 19.369 16.8785 19.8921 16.8471Z"
+                                                    fill="#f26f21" />
+                                            </svg>
+                                        </div>
+                                        <div class="info-content ml-dec-5">
+                                            <a href="tel:+44 07740611649">
+                                                <h4 class="title">+44 07740611649</h4>
+                                            </a>
+
+                                        </div>
+                                    </div> -->
+                                    <!-- single contact area end -->
+                                </div>
+                                <!-- footer contact area end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb--20 pt--20 border-top-copyright">
+                <div class="col-lg-12">
+                    <!-- copyright area start -->
+                    <div class="copyright-area-two">
+                        <div class="left">
+                            <p>Copyright 2026. All Rights Reserved.</p>
+                        </div>
+                        <!-- <div class="right">
+                        <ul>
+                            <li><a href="javascript:void(0)">Terms & conditions</a></li>
+                            <li><a href="javascript:void(0)">Privacy policy</a></li>
+                        </ul>
+                    </div> -->
+                    </div>
+                    <!-- copyright area end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header style two -->
+
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg>
+    </div>
+
+    <div class="search-input-area">
+        <div class="container">
+            <div class="search-input-inner">
+                <div class="input-div">
+                    <input id="searchInput1" class="search-input" type="text" placeholder="Search by keyword or #">
+                    <button><i class="far fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
+    </div>
+
+    <div id="anywhere-home" class="">
+    </div>
+
+
+    <!-- jquery js -->
+    <script src="assets/js/plugins/jquery.min.js"></script>
+    <script src="assets/js/vendor/jqueryui.js"></script>
+    <script src="assets/js/plugins/counter-up.js"></script>
+    <script src="assets/js/plugins/swiper.js"></script>
+    <script src="assets/js/plugins/metismenu.js"></script>
+    <script src="assets/js/vendor/waypoint.js"></script>
+    <script src="assets/js/vendor/waw.js"></script>
+    <script src="assets/js/plugins/gsap.min.js"></script>
+    <script src="assets/js/plugins/scrolltigger.js"></script>
+    <script src="assets/js/vendor/split-text.js"></script>
+    <script src="assets/js/vendor/contact.form.js"></script>
+    <script src="assets/js/vendor/split-type.js"></script>
+    <script src="assets/js/plugins/jquery-timepicker.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- header style two End -->
+
+    <script>
+        // Disable Bootstrap’s click toggle just for “Projects”
+        document.querySelectorAll('#projectsDropdown').forEach(el => {
+            el.removeAttribute('data-bs-toggle');
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
